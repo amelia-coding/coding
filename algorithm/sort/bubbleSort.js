@@ -14,7 +14,7 @@
 **/
 
 /**
-冒泡排序（未优化）
+1、冒泡排序（未优化）
 **/
 const bubbleSort1 = (arr) => {
   console.time('改进前冒泡排序耗时');
@@ -34,9 +34,8 @@ const bubbleSort1 = (arr) => {
 };
 
 /**
-冒泡排序（已优化）
+2、冒泡排序（已优化）
 **/
-// 冒泡排序（已优化）
 const bubbleSort = arr => {
   console.time('改进后冒泡排序耗时');
   const length = arr.length;
