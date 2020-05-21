@@ -1,20 +1,13 @@
-// 输出链表的倒数第K个结点
-var head = {
-  value: 1,
-  next: {
-    value: 2,
-    next: {
-      value: 3,
-      next: {
-        value: 4,
-        next: {
-          value: 5,
-          next: null,
-        },
-      },
-    },
-  },
-};
+function ListNode(x) {
+  this.val = x;
+  this.next = null;
+}
+
+var head = new ListNode(1);
+var node1 = new ListNode(2);
+var node2 = new ListNode(3);
+head.next = node1;
+node1.next = node2;
 
 function findIndexofK(head, k) {
   if (!head) return null;
@@ -31,4 +24,4 @@ function findIndexofK(head, k) {
   return p2;
 }
 
-console.log(findIndexofK(head, 1));
+console.log(findIndexofK(head, 2));
