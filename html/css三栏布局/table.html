@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>table</title>
+  <meta charset="UTF-8" />
+  <style>
+  html * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .left,
+  .right {
+    width: 100px;
+  }
+
+  .left {
+    background-color: red;
+  }
+
+  .right {
+    background-color: blue;
+  }
+
+  .center {
+    background-color: yellow;
+  }
+
+  .container {
+    width: 100%;
+    display: table;
+  }
+
+  .left,
+  .center,
+  .right {
+    display: table-cell;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">我是left</div>
+    <div class="center">
+      <h2>我是center,通过table实现</h2>
+      display: table;
+      display: table-cell;
+    </div>
+    <div class="right">我是right</div>
+  </div>
+</body>
+
+</html>

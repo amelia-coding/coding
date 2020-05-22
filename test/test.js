@@ -1,27 +1,18 @@
-function ListNode(x) {
-  this.val = x;
-  this.next = null;
+// 和为S的两个数字
+// 输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S。输出任意一对即可
+function twoSumInSortedArr(nums, sum) {
+  let left = 0,
+    right = nums.length - 1;
+  while (left < right) {
+    if (nums[left] + nums[right] === sum) {
+      return [nums[left], nums[right]];
+    } else if (nums[left] + nums[right] > sum) {
+      right--;
+    } else if (nums[left] + nums[right] < sum) {
+      left++;
+    }
+  }
+  return [];
 }
 
-var head = new ListNode(1);
-var node1 = new ListNode(2);
-var node2 = new ListNode(3);
-head.next = node1;
-node1.next = node2;
-
-function findIndexofK(head, k) {
-  if (!head) return null;
-  let p1 = head;
-  let p2 = head;
-  while (k) {
-    p1 = p1.next;
-    k--;
-  }
-  while (p1) {
-    p1 = p1.next;
-    p2 = p2.next;
-  }
-  return p2;
-}
-
-console.log(findIndexofK(head, 2));
+console.log(twoSumInSortedArr([2, 3, 3, 4, 7, 7, 8, 9], 10));

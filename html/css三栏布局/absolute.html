@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>absolute</title>
+  <meta charset="UTF-8" />
+  <style>
+  html * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .left,
+  .right {
+    width: 100px;
+  }
+
+  .left {
+    background-color: red;
+  }
+
+  .right {
+    background-color: blue;
+  }
+
+  .center {
+    background-color: yellow;
+  }
+
+  .left,
+  .center,
+  .right {
+    position: absolute;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .center {
+    left: 100px;
+    right: 100px;
+  }
+
+  .right {
+    right: 0;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">我是left</div>
+    <div class="center">
+      <h2>我是center,通过absolute实现</h2>
+      posotion:absolute
+    </div>
+    <div class="right">我是right</div>
+  </div>
+  <div>333333333333333333</div>
+</body>
+
+</html>
