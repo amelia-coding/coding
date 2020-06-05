@@ -1,16 +1,13 @@
 function findSubArr(nums, target) {
   let res = [];
-  loop(nums, target, 0, 0, 0, res);
-  console.log(res);
-}
-
-function loop(nums, target, left, right, sum, res) {
+  let left = 0,
+    right = 0,
+    sum = 0;
   while (left <= right && right <= nums.length) {
     if (sum === target) {
       res.push(nums.slice(left, right));
       sum += nums[right];
       right++;
-      loop(nums, left, right, sum, res);
     } else if (sum > target) {
       sum -= nums[left];
       left++;
@@ -19,6 +16,7 @@ function loop(nums, target, left, right, sum, res) {
       right++;
     }
   }
+  console.log(res);
 }
 
-findSubArr([1, 2, 3, 5, 6, 8], 11);
+findSubArr([3, 3, 5, 5, 6, 7, 8, 8], 11);
