@@ -1,22 +1,28 @@
 //同种结构的字符串
-function isomorphicString(str1, str2) {
+function isomorphicString(s, t) {
+  if (s.length != t.length) return false;
   let map = new Map();
-  let arr1 = str1.split("");
-  let arr2 = str2.split("");
-  for (let i = 0; i < arr1.length; i++) {
-    let mapStr = map.get(arr1[i]);
-    if (mapStr) {
-      if (arr2[i] !== mapStr) {
-        return false;
-      }
+  for (let i in s) {
+    let mapStr = map.get(s[i]);
+    if (mapStr && t[i] !== mapStr) {
+      return false;
     } else {
-      map.set(arr1[i], arr2[i]);
+      map.set(s[i], t[i]);
+    }
+  }
+  map = new Map();
+  for (let i in t) {
+    let mapStr = map.get(t[i]);
+    if (mapStr && s[i] !== mapStr) {
+      return false;
+    } else {
+      map.set(t[i], s[i]);
     }
   }
   return true;
 }
 
-console.log(isomorphicString("egg", "add"));
+console.log(isomorphicString("ega", "add"));
 console.log(isomorphicString("paper", "title"));
-console.log(isomorphicString("paper", "tikle"));
+console.log(isomorphicString("ab", "cc"));
 console.log(isomorphicString("foo", "bar"));
