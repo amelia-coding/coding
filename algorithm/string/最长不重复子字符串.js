@@ -5,7 +5,7 @@ function longestSubstringWithoutRepeat(str) {
   let longestString = "";
   let map = new Map();
   while (right < str.length) {
-    if (map.has(str[right])) {
+    if (map.has(str[right]) && ) {
       const substring = str.slice(left, right);
       res.push(substring);
       left = map.get(str[right]) + 1;
@@ -22,4 +22,4 @@ function longestSubstringWithoutRepeat(str) {
   return res;
 }
 
-longestSubstringWithoutRepeat("abcdefcgwxyzqmnopc");
+longestSubstringWithoutRepeat("abcdefcgbxyzqmnopc");
