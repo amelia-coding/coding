@@ -1,12 +1,11 @@
-//抹平数组
-// var arr = [1, 2, [3], [4, 5, [6]]];
-
-// function foo(arr) {
-//   return arr.reduce((target, current) => {
-//     return target.concat(Array.isArray(current) ? foo(current) : current);
-//   }, []);
-// }
-// console.log(foo(arr));
+/*
+ * @Author: your name
+ * @Date: 2020-06-16 18:06:05
+ * @LastEditTime: 2020-06-16 20:29:23
+ * @LastEditors: Please set LastEditors
+ * @Description: 对象扁平化
+ * @FilePath: \coding\utils\objFlat.js
+ */
 
 var obj = {
   a: {
@@ -15,9 +14,12 @@ var obj = {
         d: 1,
       },
     },
+    e: {
+      a: 1,
+    },
   },
-  b: {},
-  nn: 2,
+
+  nn: null,
   arr: [1, 2, 3],
 };
 
@@ -91,4 +93,15 @@ Object.unflatten2 = function (data) {
   return result[""];
 };
 
-Object.flatten(obj);
+// Object.flatten(obj);
+
+console.log(
+  Object.unflatten({
+    "a.b.c.d": 1,
+    "a.e.a": 1,
+    nn: null,
+    "arr[0]": 1,
+    "arr[1]": 2,
+    "arr[2]": 3,
+  })
+);

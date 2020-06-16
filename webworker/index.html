@@ -1,0 +1,35 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-16 14:54:32
+ * @LastEditTime: 2020-06-16 14:59:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \coding\webworker\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webworker</title>
+  </head>
+  <body>
+    <div>webworker demo</div>
+  </body>
+  <script>
+    let s = new Worker("./worker.js");
+    s.postMessage({
+      data: "dedicated worker",
+    });
+    //监听消息
+    s.onmessage = function (event) {
+      console.log(2, event.data);
+      // 记得关闭哦，不然会消耗资源
+      s.terminate();
+    };
+    // 监听错误事件
+    s.onerror = function (event) {
+      console.log("error", event);
+    };
+  </script>
+</html>
