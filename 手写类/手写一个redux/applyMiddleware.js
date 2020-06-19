@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-19 15:23:19
+ * @LastEditTime: 2020-06-19 15:24:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \coding\手写类\手写一个redux\applyMiddleware.js
+ */
 function applyMiddleware(...middlewares) {
   return (createStore) => (reducer, preloadedState, enhancer) => {
     const store = createStore(reducer, preloadedState, enhancer);
@@ -27,6 +35,7 @@ function compose(...funcs) {
   return funcs.reduce((a, b) => (...args) => a(b(...args)));
 }
 
+//解析:
 function add1(x) {
   console.log(111);
   return x + 1;
