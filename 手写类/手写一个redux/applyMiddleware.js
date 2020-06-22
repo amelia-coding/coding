@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-19 15:23:19
- * @LastEditTime: 2020-06-19 15:24:09
+ * @LastEditTime: 2020-06-19 17:53:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \coding\手写类\手写一个redux\applyMiddleware.js
@@ -35,7 +35,6 @@ function compose(...funcs) {
   return funcs.reduce((a, b) => (...args) => a(b(...args)));
 }
 
-//解析:
 function add1(x) {
   console.log(111);
   return x + 1;
@@ -54,5 +53,6 @@ function add3(x) {
 console.log(compose(add1, add2, add3)(9));
 
 (...arg) => add1(add2(...arg));
-
 (...args) => add1(add2(add3(...args)));
+
+
