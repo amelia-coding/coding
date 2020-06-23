@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-19 15:24:26
- * @LastEditTime: 2020-06-22 16:50:20
+ * @LastEditTime: 2020-06-23 14:18:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \coding\手写类\手写一个redux\createStore.js
@@ -25,6 +25,11 @@ function createStore(reducer, preloadedState) {
 
   function subscribe(fn) {
     listeners.push(fn);
+  }
+
+  function replaceReducer(nextReducer) {
+    reducer = nextReducer;
+    dispatch({ type: "@@REDUX_REPLACE" });
   }
 
   dispatch({ type: "@@REDUX_INIT" }); //初始化store数据

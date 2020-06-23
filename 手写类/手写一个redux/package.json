@@ -1,0 +1,14 @@
+{
+  "name": "redux-demo",
+  "version": "1.0.0",
+  "description": "<!--\r  * @Author: your name\r  * @Date: 2020-06-19 17:46:36\r  * @LastEditTime: 2020-06-19 17:46:59\r  * @LastEditors: Please set LastEditors\r  * @Description: In User Settings Edit\r  * @FilePath: \\coding\\手写类\\手写一个redux\\README.md\r -->",
+  "main": "applyMiddleware.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
