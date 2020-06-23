@@ -1,47 +1,52 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-22 10:49:07
+ * @LastEditTime: 2020-06-23 11:25:14
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \coding\CSS实现\css三栏布局\grid.html
+-->
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>grid</title>
+    <meta charset="UTF-8" />
+    <style>
+      html * {
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-  <title>grid</title>
-  <meta charset="UTF-8" />
-  <style>
-  html * {
-    margin: 0;
-    padding: 0;
-  }
+      .container {
+        display: grid;
+        width: 100%;
+        /*grid-template-rows: 100px;*/
+        grid-template-columns: 100px auto 100px;
+      }
 
-  .container {
-    display: grid;
-    width: 100%;
-    /*grid-template-rows: 100px;*/
-    grid-template-columns: 100px auto 100px;
-  }
+      .left {
+        background-color: red;
+      }
 
+      .right {
+        background-color: blue;
+      }
 
-  .left {
-    background-color: red;
-  }
+      .center {
+        background-color: yellow;
+      }
+    </style>
+  </head>
 
-  .right {
-    background-color: blue;
-  }
-
-  .center {
-    background-color: yellow;
-  }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="left">我是left</div>
-    <div class="center">
-      <h2>我是center,通过grid实现</h2>
-      display: grid;
+  <body>
+    <div class="container">
+      <div class="left">我是left</div>
+      <div class="center">
+        <h2>我是center,通过grid实现</h2>
+        display: grid;
+      </div>
+      <div class="right">我是right</div>
     </div>
-    <div class="right">我是right</div>
-  </div>
-  <div>123</div>
-</body>
-
+    <div>123</div>
+  </body>
 </html>

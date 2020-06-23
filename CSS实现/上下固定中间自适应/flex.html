@@ -1,0 +1,72 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-23 11:03:20
+ * @LastEditTime: 2020-06-23 11:08:02
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \coding\CSS实现\上下固定中间自适应\flex.html
+-->
+<!--
+ * @Author: your name
+ * @Date: 2020-06-23 10:49:29
+ * @LastEditTime: 2020-06-23 11:02:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \coding\CSS实现\上下固定中间自适应\absolute.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      html * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .top,
+      .bottom {
+        height: 100px;
+      }
+
+      .top {
+        background-color: red;
+      }
+
+      .center {
+        background-color: yellow;
+      }
+
+      .bottom {
+        background-color: blue;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .top,
+      .bottom {
+        height: 100px;
+      }
+
+      .center {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">我是top</div>
+      <div class="center">
+        <h2>我是center,通过absolute实现</h2>
+        posotion:absolute
+      </div>
+      <div class="bottom">我是bottom</div>
+    </div>
+  </body>
+</html>

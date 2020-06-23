@@ -1,0 +1,69 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-23 10:49:29
+ * @LastEditTime: 2020-06-23 11:05:01
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \coding\CSS实现\上下固定中间自适应\absolute.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>absolute</title>
+    <style>
+      html * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .top,
+      .bottom {
+        height: 100px;
+      }
+
+      .top {
+        background-color: red;
+      }
+
+      .center {
+        background-color: yellow;
+      }
+
+      .bottom {
+        background-color: blue;
+      }
+
+      .top,
+      .center,
+      .bottom {
+        position: absolute;
+        width: 100%;
+      }
+
+      .top {
+        top: 0;
+      }
+
+      .bottom {
+        bottom: 0;
+      }
+
+      .center {
+        top: 100px; /* 偏移一个header的高度 */
+        bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">我是top</div>
+      <div class="center">
+        <h2>我是center,通过absolute实现</h2>
+        posotion:absolute
+      </div>
+      <div class="bottom">我是bottom</div>
+    </div>
+  </body>
+</html>
