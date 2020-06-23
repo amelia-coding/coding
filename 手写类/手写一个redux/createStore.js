@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-19 15:24:26
- * @LastEditTime: 2020-06-23 14:18:22
+ * @LastEditTime: 2020-06-23 14:56:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \coding\手写类\手写一个redux\createStore.js
@@ -9,7 +9,10 @@
 
 const combindReducer = require("./combindReducer");
 
-function createStore(reducer, preloadedState) {
+function createStore(reducer, preloadedState, enhancer) {
+  if (enhancer) {
+    return enhancer(createStore)(reducer, preloadedState);
+  }
   let currentState = preloadedState;
   let listeners = [];
 
@@ -38,6 +41,7 @@ function createStore(reducer, preloadedState) {
     dispatch,
     getState,
     subscribe,
+    replaceReducer,
   };
 }
 
@@ -80,5 +84,6 @@ const store = createStore(
     count: countReducer,
     city: cityReducer,
   })
+  //preloadedState
 );
 console.log(store.getState());
