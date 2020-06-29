@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-06-15 15:08:33
- * @LastEditTime: 2020-06-16 13:44:46
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-06-30 11:19:06
+ * @LastEditors: du.j
  * @Description: In User Settings Edit
  * @FilePath: \coding\module\b.js
  */
@@ -19,7 +19,7 @@ module.exports = {
   incCounter: incCounter,
 };
 
-//输出的counter属性实际上是一个取值器函数
+//输出的counter属性实际上是一个取值器函数,重写对象的getter和setter方法
 module.exports = {
   get counter() {
     return counter;

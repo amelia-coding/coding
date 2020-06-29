@@ -1,3 +1,11 @@
+/*
+ * @Author: du.j
+ * @Date: 2020-06-30 10:43:08
+ * @LastEditors: du.j
+ * @LastEditTime: 2020-06-30 11:07:51
+ * @Description: 快排
+ */
+
 function quickSort(arr, start, end) {
   if (start > end) {
     return;
@@ -29,6 +37,19 @@ function quickSort(arr, start, end) {
   quickSort(arr, i + 1, end);
 }
 
-var arr = [3, 5, 4, 2, 9, 8, 7, 10];
-quickSort(arr, 0, arr.length - 1);
-console.log(arr);
+function quickSort(arr) {
+  if (arr.length === 0) {
+    return [];
+  }
+  var pivot = arr[0];
+  var lesser = [];
+  var greater = [];
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i] < pivot) {
+      lesser.push(arr[i]);
+    } else {
+      greater.push(arr[i]);
+    }
+  }
+  return quickSort(lesser).concat(pivot, quickSort(greater));
+}
