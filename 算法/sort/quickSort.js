@@ -2,41 +2,14 @@
  * @Author: du.j
  * @Date: 2020-06-30 10:43:08
  * @LastEditors: du.j
- * @LastEditTime: 2020-06-30 11:07:51
+ * @LastEditTime: 2020-06-30 16:31:28
  * @Description: 快排
  */
 
-function quickSort(arr, start, end) {
-  if (start > end) {
-    return;
-  }
-  let i = start,
-    j = end,
-    pivot = arr[start]; //存放基准数
-  while (i !== j) {
-    // 从右边开始，找第一个小于基准的位置
-    while (arr[j] >= pivot && i < j) {
-      j--;
-    }
-    // 从左边开始，找第一个大于基准的位置
-    while (arr[i] <= pivot && i < j) {
-      i++;
-    }
-    // 交换两个数
-    if (i < j) {
-      [arr[j], arr[i]] = [arr[i], arr[j]];
-    }
-  }
-
-  // 最后把基准数归位
-  arr[start] = arr[i];
-  arr[i] = pivot;
-  // 递归处理左边
-  quickSort(arr, start, i - 1);
-  // 递归处理右边
-  quickSort(arr, i + 1, end);
-}
-
+/**
+ * 方案一
+ * @param {} arr
+ */
 function quickSort(arr) {
   if (arr.length === 0) {
     return [];
@@ -53,3 +26,81 @@ function quickSort(arr) {
   }
   return quickSort(lesser).concat(pivot, quickSort(greater));
 }
+
+/**
+ * 面试版本
+ */
+function ArrayList() {
+  var array = [];
+
+  this.insert = function (...item) {
+    array = array.concat(item);
+  };
+
+  this.toString = function () {
+    return array.join();
+  };
+
+  this.quickSort = function () {
+    quick(array, 0, array.length - 1);
+    return array;
+  };
+
+  var swapQuickStort = function (array, index1, index2) {
+    var aux = array[index1];
+    array[index1] = array[index2];
+    array[index2] = aux;
+  };
+
+  var partition = function (array, left, right) {
+    var pivot = array[Math.floor((right + left) / 2)],
+      i = left,
+      j = right;
+
+    console.log(
+      "pivot is " + pivot + "; left is " + left + "; right is " + right
+    );
+
+    while (i <= j) {
+      // 从左边开始，找第一个大于等于基准的位置
+      while (array[i] < pivot) {
+        i++;
+      }
+      // 从右边开始，找第一个小于等于基准的位置
+      while (array[j] > pivot) {
+        j--;
+      }
+      console.log(array, i, j);
+      if (i <= j) {
+        console.log("swap " + array[i] + " with " + array[j]);
+        swapQuickStort(array, i, j);
+        i++;
+        j--;
+      }
+    }
+
+    return i;
+  };
+
+  var quick = function (array, left, right) {
+    var index;
+
+    if (array.length > 1) {
+      index = partition(array, left, right);
+      console.log("index = " + index);
+
+      if (left < index - 1) {
+        quick(array, left, index - 1);
+      }
+
+      if (index < right) {
+        quick(array, index, right); //将index塞进去，说明index不代表一趟快排之后正确的位置
+      }
+    }
+    return array;
+  };
+}
+
+var arr = new ArrayList();
+arr.insert(10, 4, 5, 2, 7, 8, 6, 10);
+console.log(arr.quickSort());
