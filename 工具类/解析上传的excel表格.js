@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-06-19 17:02:25
- * @LastEditTime: 2020-06-19 17:02:26
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \coding\工具类\解析上传的excel表格.js
- */
 var rABS = true;
 const f = fileList[0];
 var reader = new FileReader();

@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-06-15 15:08:33
- * @LastEditTime: 2020-06-30 11:19:06
- * @LastEditors: du.j
- * @Description: In User Settings Edit
- * @FilePath: \coding\module\b.js
- */
 var counter = 3;
 
 function incCounter() {

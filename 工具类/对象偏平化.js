@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-06-16 18:06:05
- * @LastEditTime: 2020-06-16 20:29:23
- * @LastEditors: Please set LastEditors
- * @Description: 对象扁平化
- * @FilePath: \coding\utils\objFlat.js
- */
-
 var obj = {
   a: {
     b: {
