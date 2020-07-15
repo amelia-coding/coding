@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-06-16 21:48:56
- * @LastEditTime: 2020-06-16 21:59:44
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \coding\algorithm\tree\addParent.js
- */
 var obj = {
   id: 1,
   child: [
