@@ -1,24 +1,35 @@
 /**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
+ * @param {character[][]} board
+ * @param {string} word
+ * @return {boolean}
  */
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
- * @return {ListNode}
- */
-var mergeTwoLists = function (l1, l2) {
-  if (!l1 || !l2) return l1 || l2;
-  if (l1.val <= l2.val) {
-    l1.next = mergeTwoLists(l1.next, l2);
-    return l1;
-  } else {
-    l2.next = mergeTwoLists(l1, l2.next);
-    return l2;
-  }
+var exist = function (board, word) {
+  let arr = new Array(board.length).fill([]);
+  let m = board.length;
+  let n = board[0].length;
+  return dp(board, word, m - 1, n - 1, arr);
 };
 
-console.log(mergeTwoLists(null, null);
+function dp(board, word, i, j, visited) {
+  if (
+    i < 0 ||
+    j < 0 ||
+    j > board[0].length - 1 ||
+    i > board.length - 1 ||
+    visited[i][j]
+  ) {
+    return false;
+  }
+  visited[i][j] = true;
+  if (word.indexOf(board[i][j]) > 0) {
+    return true;
+  } else {
+    return false;
+  }
+  return (
+    dp(board, word, i - 1, j, visited) ||
+    dp(board, word, i + 1, j, visited) ||
+    dp(board, word, i, j - 1, visited) ||
+    dp(board, word, i, j + 1, visited)
+  );
+}

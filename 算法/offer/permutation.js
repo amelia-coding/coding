@@ -5,3 +5,21 @@
 则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。
 题解：https://blog.csdn.net/xiaoxingxing1744/article/details/83759291
 */
+var s = "abc";
+var queue = s.split("");
+let res = [];
+dfs(queue, res);
+console.log(res);
+
+function dfs(queue, res, current = "", visited = "") {
+  visited += current;
+  if (queue.length === 0) {
+    res.push(visited);
+    return;
+  }
+  for (let i = 0; i < queue.length; i++) {
+    current = queue.shift();
+    dfs(queue, res, current, visited);
+    queue.push(current);
+  }
+}
