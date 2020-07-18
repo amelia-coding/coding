@@ -4,25 +4,13 @@
 
 ## 算法
 
-<<<<<<< HEAD
-### offer`
-
 - [28. 对称的二叉树](https://github.com/amelia-coding/coding/blob/master/%E7%AE%97%E6%B3%95/leetcode/28.对称的二叉树.js)
-
-### leetcode`
 
 `矩阵深搜系列`
 
 - 矩阵中的路径
 - 岛屿数量
 - 机器人的运动范围
-=======
-Offer
->>>>>>> db50760ab17d52dd04502ee2d4555353c8002617
-
-Leetcode
-
-其他
 
 ## CSS 实现
 
@@ -38,13 +26,11 @@ ES6
 
 ## 框架
 
-react
-
-redux
-
 ## 工程化
 
 webpack
+
+持续集成
 
 ## 测试
 
