@@ -17,6 +17,7 @@ var permutation = function (s) {
   let queue = s.split(""),
     res = [];
   dfs(queue, "", [], res);
+  res = [...new Set(res)];
   return res;
 };
 
