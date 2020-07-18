@@ -20,6 +20,10 @@
 - 112. 路径总和
 - [字节一面：给定一个二叉树, 找到该树中两个指定节点间的最短距离](https://github.com/sisterAn/JavaScript-Algorithms/issues/82)
 
+链表
+
+- 22. 链表中倒数第 k 个节点
+
 字符串
 
 - 205. 同构字符串
