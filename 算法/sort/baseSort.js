@@ -1,7 +1,11 @@
-/**
-选择排序 O(n²)
-https://codesandbox.io/s/basesort-y0k64
-**/
+/*
+ * @Author: du.j
+ * @Date: 2020-05-07 11:07:22
+ * @LastEditors: du.j
+ * @LastEditTime: 2020-06-30 10:46:54
+ * @Description: 基础排序
+ */
+
 // 冒泡排序
 function bubbleSort(array) {
   for (let outer = 0; outer < array.length; outer++) {
@@ -15,7 +19,7 @@ function bubbleSort(array) {
 }
 
 // 冒泡排序（优化）
-const bubbleSort2 = arr => {
+const bubbleSort2 = (arr) => {
   const length = arr.length;
   if (length <= 1) return;
   for (let i = 0; i < length - 1; i++) {
@@ -49,7 +53,9 @@ function selectSort(array) {
 function insertSort(array) {
   for (let outer = 1; outer < array.length; outer++) {
     for (
-      let inner = outer; inner > 0 && array[inner] < array[inner - 1]; inner--
+      let inner = outer;
+      inner > 0 && array[inner] < array[inner - 1];
+      inner--
     ) {
       swap(array, inner, inner - 1);
     }
@@ -62,8 +68,3 @@ function swap(array, i, j) {
   array[i] = array[j];
   array[j] = temp;
 }
-
-console.log(bubbleSort([1, 2, 4, 5, 7, 1, 2, 3]));
-console.log(bubbleSort2([1, 2, 4, 5, 7, 1, 2, 3]));
-console.log(selectSort([1, 2, 4, 5, 7, 1, 2, 3]));
-console.log(insertSort([1, 2, 4, 5, 7, 1, 2, 3]));

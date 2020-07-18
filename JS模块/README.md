@@ -1,12 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-06-16 13:37:27
- * @LastEditTime: 2020-06-16 13:49:09
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \coding\module\readme.md
--->
-
 # 模块化
 
 - CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
