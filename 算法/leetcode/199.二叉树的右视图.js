@@ -11,11 +11,10 @@ const rightSideViewDFS = function (root) {
 };
 
 function dfs(root, step, res) {
-  if (root) {
-    if (res.length <= step) res.push(root.val);
-    dfs(root.right, step + 1, res);
-    dfs(root.left, step + 1, res);
-  }
+  if (!root) return;
+  if (res.length <= step) res.push(root.val);
+  dfs(root.right, step + 1, res);
+  dfs(root.left, step + 1, res);
 }
 /**
  * BFS
