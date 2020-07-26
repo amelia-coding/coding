@@ -1,0 +1,29 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "description": "该项目包含了前端的一些常用的 `JS`、`CSS`、`JS 库`、以及`算法`的代码实现",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amelia-coding/coding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amelia-coding/coding/issues"
+  },
+  "homepage": "https://github.com/amelia-coding/coding#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
