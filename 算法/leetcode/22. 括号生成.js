@@ -58,8 +58,8 @@ var generateParenthesis = function (n) {
   return res;
 };
 
-//框架
-
+/*
+框架
 void backtrack(int n, int i, string& track) {
   // i 代表当前的位置，共 2n 个位置
   // 穷举到最后一个位置了，得到一个长度为 2n 组合
@@ -76,3 +76,4 @@ void backtrack(int n, int i, string& track) {
       track.pop(choice); // 撤销选择
   }
 }
+*/
