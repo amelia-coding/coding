@@ -1,52 +1,52 @@
+<!-- 比较完美 移动端首选
+不兼容 ie9 及以下 -->
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>flex</title>
+    <meta charset="UTF-8" />
+    <style>
+      html * {
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-  <title>flex</title>
-  <meta charset="UTF-8" />
-  <style>
-  html * {
-    margin: 0;
-    padding: 0;
-  }
+      .left,
+      .right {
+        width: 100px;
+      }
 
-  .left,
-  .right {
-    width: 100px;
-  }
+      .left {
+        background-color: red;
+      }
 
-  .left {
-    background-color: red;
-  }
+      .right {
+        background-color: blue;
+      }
 
-  .right {
-    background-color: blue;
-  }
+      .center {
+        background-color: yellow;
+      }
 
-  .center {
-    background-color: yellow;
-  }
+      .container {
+        display: flex;
+      }
 
-  .container {
-    display: flex;
-  }
+      .center {
+        flex: 1;
+      }
+    </style>
+  </head>
 
-  .center {
-    flex: 1
-  }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="left">我是left</div>
-    <div class="center">
-      <h2>我是center,通过flex实现</h2>
-      flex:
+  <body>
+    <div class="container">
+      <div class="left">我是left</div>
+      <div class="center">
+        <h2>我是center,通过flex实现</h2>
+        flex:
+      </div>
+      <div class="right">我是right</div>
     </div>
-    <div class="right">我是right</div>
-  </div>
-  <div>333333333333333333</div>
-</body>
-
+    <div>333333333333333333</div>
+  </body>
 </html>

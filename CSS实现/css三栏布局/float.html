@@ -1,56 +1,60 @@
+<!-- 
+  注意清除浮动，因为浮动会导致父元素高度塌陷
+脱离文档流，清除浮动（创建BFC，overflow：hidden）
+兼容性较好 
+-->
+
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>float+margin</title>
+    <meta charset="UTF-8" />
+    <style>
+      html * {
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-  <title>float+margin</title>
-  <meta charset="UTF-8" />
-  <style>
-  html * {
-    margin: 0;
-    padding: 0;
-  }
+      .left,
+      .right {
+        width: 100px;
+      }
 
-  .left,
-  .right {
-    width: 100px;
-  }
+      .left {
+        background-color: red;
+      }
 
-  .left {
-    background-color: red;
-  }
+      .right {
+        background-color: blue;
+      }
 
-  .right {
-    background-color: blue;
-  }
+      .center {
+        background-color: yellow;
+      }
 
-  .center {
-    background-color: yellow;
-  }
+      .left {
+        float: left;
+      }
 
-  .left {
-    float: left;
-  }
+      .right {
+        float: right;
+      }
 
-  .right {
-    float: right;
-  }
+      .center {
+        margin: 0 100px;
+      }
+    </style>
+  </head>
 
-  .center {
-    margin: 0 100px;
-  }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="left">我是left</div>
-    <div class="right">我是right</div>
-    <div class="center">
-      <h2>我是center,通过float实现</h2>
-      float:left/right
+  <body>
+    <div class="container">
+      <div class="left">我是left</div>
+      <div class="right">我是right</div>
+      <div class="center">
+        <h2>我是center,通过float实现</h2>
+        float:left/right
+      </div>
     </div>
-  </div>
-  <div>333333333333333333</div>
-</body>
-
+    <div>333333333333333333</div>
+  </body>
 </html>

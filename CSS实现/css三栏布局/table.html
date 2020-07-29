@@ -1,55 +1,56 @@
+<!-- 
+  单元格会被内容撑开，相邻的单元格也会撑开对齐
+seo 不友好 当其中一个单元格高度超出的时候，其他的单元格也是会跟着一起变高的 
+-->
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>table</title>
+    <meta charset="UTF-8" />
+    <style>
+      html * {
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-  <title>table</title>
-  <meta charset="UTF-8" />
-  <style>
-  html * {
-    margin: 0;
-    padding: 0;
-  }
+      .left,
+      .right {
+        width: 100px;
+      }
 
-  .left,
-  .right {
-    width: 100px;
-  }
+      .left {
+        background-color: red;
+      }
 
-  .left {
-    background-color: red;
-  }
+      .right {
+        background-color: blue;
+      }
 
-  .right {
-    background-color: blue;
-  }
+      .center {
+        background-color: yellow;
+      }
 
-  .center {
-    background-color: yellow;
-  }
+      .container {
+        width: 100%;
+        display: table;
+      }
 
-  .container {
-    width: 100%;
-    display: table;
-  }
+      .left,
+      .center,
+      .right {
+        display: table-cell;
+      }
+    </style>
+  </head>
 
-  .left,
-  .center,
-  .right {
-    display: table-cell;
-  }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="left">我是left</div>
-    <div class="center">
-      <h2>我是center,通过table实现</h2>
-      display: table;
-      display: table-cell;
+  <body>
+    <div class="container">
+      <div class="left">我是left</div>
+      <div class="center">
+        <h2>我是center,通过table实现</h2>
+        display: table; display: table-cell;
+      </div>
+      <div class="right">我是right</div>
     </div>
-    <div class="right">我是right</div>
-  </div>
-</body>
-
+  </body>
 </html>
