@@ -51,6 +51,7 @@ function deph(root) {
   let left = deph(root.left);
   let right = deph(root.right);
   if (left === -1 || right === -1 || Math.abs(left - right) > 1) {
+    //左右子树不是，根节点不是
     return -1;
   }
   return 1 + Math.max(left, right);
