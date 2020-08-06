@@ -3,70 +3,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>圣杯布局</title>
   <style>
-  * {
-    padding: 0;
-    margin: 0;
-  }
+    * {
+      padding: 0;
+      margin: 0;
+    }
 
-  body {
-    min-width: 600px;
-  }
+    body {
+      min-width: 600px;
+    }
 
-  header,
-  footer {
-    text-align: center;
-    width: 100%;
-    background-color: #bbbbbb;
-  }
+    header,
+    footer {
+      text-align: center;
+      width: 100%;
+      background-color: #bbbbbb;
+    }
 
-  .text {
-    text-align: center;
-    line-height: 200px;
-    font-size: 40px;
-    color: #fff;
-  }
+    .text {
+      text-align: center;
+      line-height: 200px;
+      font-size: 40px;
+      color: #fff;
+    }
 
-  .bd {
-    overflow: hidden;
-    padding: 0 100px 0 200px;
-  }
+    .bd {
+      overflow: hidden;
+      padding: 0 100px 0 200px;
+    }
 
-  .main {
-    float: left;
-    width: 100%;
-    height: 200px;
-    background-color: #ddd;
-  }
+    .main {
+      float: left;
+      width: 100%;
+      height: 200px;
+      background-color: #ddd;
+    }
 
-  .left {
-    /* opacity: 0.5; */
-    float: left;
-    width: 200px;
-    height: 200px;
-    background-color: #da4242;
-    /* 产生布局效果的属性 */
-    margin-left: -100%;
-    position: relative;
-    left: -200px;
-  }
+    .left {
+      /* opacity: 0.5; */
+      float: left;
+      width: 200px;
+      height: 200px;
+      background-color: #da4242;
+      /* 产生布局效果的属性 //margin的百分比是相对于父元素的*/
+      margin-left: -100%;
+      position: relative;
+      left: -200px;
+    }
 
-  .right {
-    /* opacity: 0.5; */
-    float: left;
-    width: 100px;
-    height: 200px;
-    background-color: #4ddef1;
-    /* 产生布局效果的属性 */
-    margin-left: -100px;
-    position: relative;
-    left: 100px;
-
-  }
+    .right {
+      /* opacity: 0.5; */
+      float: left;
+      width: 100px;
+      height: 200px;
+      background-color: #4ddef1;
+      /* 产生布局效果的属性 */
+      margin-left: -100px;
+      position: relative;
+      left: 100px;
+    }
   </style>
 </head>
 

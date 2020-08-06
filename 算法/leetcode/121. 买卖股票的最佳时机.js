@@ -39,11 +39,8 @@ var maxProfit = function (prices) {
 使用DP
 */
 var maxProfit = function (prices) {
-  let profit = 0,
-    n = prices.length;
-  let profit_in = -prices[0],
-    profit_out = 0;
-  for (let i = 1; i < n; i++) {
+  let [profit_out, profit_in] = [0, -prices[0]];
+  for (let i = 1, n = prices.length; i < n; i++) {
     //卖出时利润：求最大值（上次交易卖出时利润，本次交易卖出时利润）
     profit_out = Math.max(profit_out, profit_in + prices[i]);
     //买入时利润：求最大值（上次买入时利润，本次买入时利润）
