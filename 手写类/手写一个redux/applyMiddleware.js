@@ -13,6 +13,10 @@ function applyMiddleware(...middlewares) {
     let chain = [];
     const middlewareAPI = {
       getState: store.getState,
+      //我们用applyMiddleware是为了改造dispatch的，所以applyMiddleware执行完后，'
+      //dispatch是变化了的，而middlewareAPI是applyMiddleware执行中分发到各个middleware，
+      //所以必须用匿名函数包裹dispatch，这样只要dispatch更新了，
+      //middlewareAPI中的dispatch应用也会发生变化。
       dispatch: (action) => dispatch(action),
     };
     chain = middlewares.map((middleware) => middleware(middlewareAPI));
@@ -54,5 +58,3 @@ console.log(compose(add1, add2, add3)(9));
 
 (...arg) => add1(add2(...arg));
 (...args) => add1(add2(add3(...args)));
-
-
