@@ -40,7 +40,7 @@ var nextGreaterElement = function (nums1, nums2) {
     while (stack.length > 0 && nums2[i] >= stack[stack.length - 1]) {
       stack.pop();
     }
-    map.set(nums2[i], stack[stack.length - 1] || -1);
+    map.set(nums2[i], stack.length > 0 ? stack[stack.length - 1] : -1);
     stack.push(nums2[i]);
   }
   for (let i = 0; i < nums1.length; i++) {
