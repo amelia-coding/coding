@@ -39,3 +39,26 @@ var minDepth = function (root) {
   if (root.left == null || root.right == null) return left + right + 1; //这个时候左右必然有一个空结点，直接返回非空子树的深度
   return 1 + Math.min(left, right);
 };
+
+/**
+ * BFS
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var minDepth = function (root) {
+  if (!root) return 0;
+  let queue = [root];
+  let deph = 1;
+  while (queue.length) {
+    let len = queue.length;
+    while (len) {
+      let node = queue.shift();
+      if (!node.left && !node.right) return deph;
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+      len--;
+    }
+    deph++;
+  }
+  return deph;
+};

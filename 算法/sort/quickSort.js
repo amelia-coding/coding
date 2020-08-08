@@ -46,34 +46,24 @@ function ArrayList() {
     return array;
   };
 
-  var swapQuickStort = function (array, index1, index2) {
-    var aux = array[index1];
-    array[index1] = array[index2];
-    array[index2] = aux;
-  };
+  // var swapQuickStort = function (array, index1, index2) {
+  //   var aux = array[index1];
+  //   array[index1] = array[index2];
+  //   array[index2] = aux;
+  // };
 
   var partition = function (array, left, right) {
     var pivot = array[Math.floor((right + left) / 2)],
       i = left,
       j = right;
 
-    console.log(
-      "pivot is " + pivot + "; left is " + left + "; right is " + right
-    );
-
     while (i <= j) {
       // 从左边开始，找第一个大于等于基准的位置
-      while (array[i] < pivot) {
-        i++;
-      }
+      while (array[i] < pivot) i++;
       // 从右边开始，找第一个小于等于基准的位置
-      while (array[j] > pivot) {
-        j--;
-      }
-      console.log(array, i, j);
+      while (array[j] > pivot) j--;
       if (i <= j) {
-        console.log("swap " + array[i] + " with " + array[j]);
-        swapQuickStort(array, i, j);
+        [array[i], array[j]] = [array[j], array[i]];
         i++;
         j--;
       }
@@ -83,16 +73,11 @@ function ArrayList() {
   };
 
   var quick = function (array, left, right) {
-    var index;
-
     if (array.length > 1) {
-      index = partition(array, left, right);
-      console.log("index = " + index);
-
+      var index = partition(array, left, right);
       if (left < index - 1) {
         quick(array, left, index - 1);
       }
-
       if (index < right) {
         quick(array, index, right); //将index塞进去，说明index不代表一趟快排之后正确的位置
       }
