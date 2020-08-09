@@ -35,6 +35,7 @@ function digitalSum(num) {
   return sum;
 }
 
+//代表机器人在【i，j】处，是否满足条件，满足就+1继续往四个方向搜索
 function dfs(i, j, m, n, k, visited) {
   if (
     i < 0 ||
