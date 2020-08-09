@@ -17,6 +17,19 @@ num1 和 num2 只包含数字 0-9。
 num1 和 num2 均不以零开头，除非是数字 0 本身。
 不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
 
+https://leetcode-cn.com/problems/multiply-strings/solution/gao-pin-mian-shi-xi-lie-zi-fu-chuan-cheng-fa-by-la/
+        1 2 3
+          4 5
+      ----------
+          1 5
+        1 0
+        5
+        1 2
+        8
+      4
+      --------
+  0 0 5 5    3 5
+
 */
 
 /**

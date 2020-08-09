@@ -1,5 +1,3 @@
-abstract class A {
-  abstract me(): void;
-}
+function A(a: number, b: string): void {}
 
-class B extends A {}
+const type = typeof A;
