@@ -6,7 +6,7 @@ X值的定义如下: 对于任意区间, 其X值等于区间内最小的那个�
 */
 const arr = [200, 3, 1, 6, 4, 5, 2];
 
-function find(arr) {
+function findX(arr) {
   let n = arr.length;
   let dp = Array.from(new Array(n), () => new Array(n).fill(0));
   let min = new Array(n).fill(0); //用于记录每行的最小值
@@ -29,4 +29,26 @@ function find(arr) {
 }
 
 //console.log(sum(arr, 3, 4));
-find(arr);
+findX(arr);
+
+//优化，因为dp之和前一个值有关，而且本题只需要求最大值，所以preVal可以保存一个当前遍历i所在区间的值
+//复杂度O(N2)
+function findX(arr) {
+  let n = arr.length;
+  let maxVal = 0;
+  for (let i = 0; i < n; i++) {
+    let min = arr[i];
+    let preVal = 0; //用于保存i-j区间的值
+    for (let j = i; j < n; j++) {
+      const preSum = preVal / min;
+      min = Math.min(min, arr[j]);
+      preVal = min * (preSum + arr[j]); //不断更新preVal的值为当前i-j区间的值，用于下次计算求和
+      if (preVal > maxVal) {
+        span = [i, j];
+        maxVal = preVal;
+      }
+    }
+  }
+  console.log("最大值", maxVal, "区间", span);
+  return span;
+}
