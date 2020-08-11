@@ -31,14 +31,15 @@ function findX(arr) {
 //console.log(sum(arr, 3, 4));
 findX(arr);
 
-//优化，因为dp之和前一个值有关，而且本题只需要求最大值，所以preVal可以保存一个当前遍历i所在区间的值
+//优化，因为dp只和前一个值有关，区间[i,j]的值仅取决于[i,j-1]的值。
+//而且本题只需要求最大值，所以preVal可以保存一个当前遍历[i,j]所在区间的值,maxVal保存计算的最大值
 //复杂度O(N2)
 function findX(arr) {
   let n = arr.length;
   let maxVal = 0;
   for (let i = 0; i < n; i++) {
     let min = arr[i];
-    let preVal = 0; //用于保存i-j区间的值
+    let preVal = 0; //用于保存i-j区间的值,区间[i,j]的值仅取决于[i,j-1]的值
     for (let j = i; j < n; j++) {
       const preSum = preVal / min;
       min = Math.min(min, arr[j]);
