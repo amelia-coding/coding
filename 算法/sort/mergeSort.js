@@ -15,6 +15,7 @@ function mergeSort(arr) {
   return merge(mergeSort(left), mergeSort(right));
 }
 
+//合并两个有序的数组
 const merge = (left, right) => {
   const result = [];
   while (left.length && right.length) {
