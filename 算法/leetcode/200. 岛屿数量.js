@@ -28,10 +28,14 @@ var numIslands = function (grid) {
 let dx = [-1, 0, 1, 0];
 let dy = [0, -1, 0, 1];
 function dfs(x, y, grid, m, n) {
-  if (x < 0 || y < 0 || x >= m || y >= n || grid[x][y] === "0") {
+  if (x < 0 || y < 0 || x >= m || y >= n) {
     return;
   }
-  grid[x][y] = "0";
+  if (grid[x][y] !== "1") {
+    return;
+  }
+  grid[x][y] = "2";
+
   for (let k = 0; k < 4; k++) {
     let nx = x + dx[k];
     let ny = y + dy[k];

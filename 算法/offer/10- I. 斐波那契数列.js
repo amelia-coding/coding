@@ -35,9 +35,16 @@ var fib = function (n) {
 };
 
 //尾递归
+function Fibonacci(n, ac1 = 0, ac2 = 1) {
+  //0开始
+  if (n <= 0) {
+    return ac1;
+  }
+  return Fibonacci(n - 1, ac2, ac1 + ac2);
+}
 function Fibonacci(n, ac1 = 1, ac2 = 1) {
-  if (n <= 1) {
-    return ac2;
+  if (n <= 0) {
+    return ac1;
   }
   return Fibonacci(n - 1, ac2, ac1 + ac2);
 }
