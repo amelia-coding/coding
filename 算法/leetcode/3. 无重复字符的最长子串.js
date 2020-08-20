@@ -1,4 +1,5 @@
 /**
+ * 同向双指针
  * @param {string} s
  * @return {number}
  */
