@@ -8,6 +8,7 @@ function gen(arr) {
   let res = [];
   dfs(arr, 0, [], res);
   console.log(res);
+  return res;
 }
 
 function dfs(arr, k, solution, res) {
