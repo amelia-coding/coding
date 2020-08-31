@@ -126,14 +126,22 @@
 .border-bottomleft::before {
   left: 0;
 }
-@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+@media (max--moz-device-pixel-ratio: 1.49),
+  (-webkit-max-device-pixel-ratio: 1.49),
+  (max-device-pixel-ratio: 1.49),
+  (max-resolution: 143dpi),
+  (max-resolution: 1.49dppx) {
   /* 默认值，无需重置 */
 }
-@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49),
+  (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49),
+  (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49),
+  (min-resolution: 144dpi) and (max-resolution: 239dpi),
+  (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
   .border::before {
     width: 200%;
     height: 200%;
-    transform: scale(.5);
+    transform: scale(0.5);
   }
   .border-top::before,
   .border-bottom::before,
@@ -143,7 +151,7 @@
   .border-rightbottom::after,
   .border-topright::before,
   .border-bottomleft::before {
-    transform: scaleY(.5);
+    transform: scaleY(0.5);
   }
   .border-right::before,
   .border-left::before,
@@ -153,14 +161,18 @@
   .border-rightbottom::before,
   .border-topright::after,
   .border-bottomleft::after {
-    transform: scaleX(.5);
+    transform: scaleX(0.5);
   }
 }
-@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+@media (min--moz-device-pixel-ratio: 2.5),
+  (-webkit-min-device-pixel-ratio: 2.5),
+  (min-device-pixel-ratio: 2.5),
+  (min-resolution: 240dpi),
+  (min-resolution: 2.5dppx) {
   .border::before {
     width: 300%;
     height: 300%;
-    transform: scale(.33333);
+    transform: scale(0.33333);
   }
   .border-top::before,
   .border-bottom::before,
@@ -170,7 +182,7 @@
   .border-rightbottom::after,
   .border-topright::before,
   .border-bottomleft::before {
-    transform: scaleY(.33333);
+    transform: scaleY(0.33333);
   }
   .border-right::before,
   .border-left::before,
@@ -180,6 +192,6 @@
   .border-rightbottom::before,
   .border-topright::after,
   .border-bottomleft::after {
-    transform: scaleX(.33333);
+    transform: scaleX(0.33333);
   }
 }
