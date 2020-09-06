@@ -10,16 +10,16 @@ function gen(arr) {
   console.log(res);
 }
 
-function dfs(arr, k, solution, res) {
-  if (k === arr.length) {
-    res.push(solution.join(""));
-    return;
-  }
-  for (let i = 0; i < arr[k].length; i++) {
-    solution.push(arr[k][i]);
-    dfs(arr, k + 1, solution, res);
-    solution.pop();
+var data = [];
+function test() {
+  for (var i = 0; i < 3; i++) {
+    (function (i) {
+      data[i] = function () {
+        console.log(i);
+      };
+    })(i);
   }
 }
 
-gen(arr);
+test();
+data[1]();
