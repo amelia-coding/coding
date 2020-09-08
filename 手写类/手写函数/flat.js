@@ -1,5 +1,6 @@
 /*
 deepFlat
+[].reduce(fn,iniVal)
 */
 Array.prototype.deepFlat = function () {
   return this.reduce(
