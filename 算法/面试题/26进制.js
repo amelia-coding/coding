@@ -29,7 +29,7 @@
 */
 
 function convert(num) {
-  let chars = "@ABCDEFGHIJKLMNOPQRSTUVWSY";
+  let chars = "ABCDEFGHIJKLMNOPQRSTUVWSYZ";
   let str = "";
   if (num % 26 === 0) {
     while (num) {
@@ -48,4 +48,4 @@ convert(1);
 convert(26);
 convert(52);
 convert(54);
-convert(54);
+convert(26 * 25 + 26 * 25 + 25);
