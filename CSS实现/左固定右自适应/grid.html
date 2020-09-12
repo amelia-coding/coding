@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flex</title>
     <style>
-      .box {
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
         background-color: silver;
       }
       .left {
@@ -13,27 +19,19 @@
         background-color: slateblue;
       }
 
-      .box {
-        display: flex;
-      }
-      .left,
-      .right {
-        /* 定义了子元素不伸缩 */
-        flex: 0 0 auto;
-        /* 伸缩 */
-        flex: 1;
+      .container {
+        display: grid;
+        grid-template-columns: 100px auto;
       }
     </style>
   </head>
-
   <body>
-    <div class="box">
+    <div class="container">
       <div class="left">
-        <p>我是left</p>
-        123
+        this is left
       </div>
       <div class="right">
-        我是right
+        this is right
       </div>
     </div>
   </body>

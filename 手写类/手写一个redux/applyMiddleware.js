@@ -41,20 +41,28 @@ function compose(...funcs) {
 
 function add1(x) {
   console.log(111);
-  return x + 1;
+  return function (action) {
+    console.log(1111);
+  };
 }
 
 function add2(x) {
   console.log(222);
-  return x + 1;
+  return function (action) {
+    console.log(2222);
+  };
 }
 
 function add3(x) {
   console.log(333);
-  return x + 1;
+  return function (action) {
+    console.log(3333);
+  };
 }
 
-console.log(compose(add1, add2, add3)(9));
+// console.log(compose(add1, add2, add3)(9));
+const fun = compose(add1, add2, add3)(9);
+fun({ type: {} });
 
-(...arg) => add1(add2(...arg));
-(...args) => add1(add2(add3(...args)));
+// (...arg) => add1(add2(...arg));
+// (...args) => add1(add2(add3(...args)));

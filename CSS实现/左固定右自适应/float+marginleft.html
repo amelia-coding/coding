@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>无法添加下边框</title>
-    <style type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float+bfc</title>
+    <style>
       * {
         padding: 0;
         margin: 0;
       }
-      .box {
+      .container {
         background-color: silver;
       }
       .left {
@@ -17,32 +19,23 @@
         background-color: slateblue;
       }
 
-      .box {
-        overflow: hidden;
-      }
-
-      .left,
-      .right {
-        float: left;
+      .left {
         width: 100px;
-        margin-bottom: -999em;
-        padding-bottom: 999em;
+        float: left;
+      }
+      .right {
+        margin-left: 100px;
       }
     </style>
   </head>
-
   <body>
-    <div class="box">
+    <div class="container">
       <div class="left">
-        <p>我是left</p>
-        123
+        this is left
       </div>
       <div class="right">
-        我是right
+        this is right
       </div>
-    </div>
-    <div class="next">
-      11111
     </div>
   </body>
 </html>
