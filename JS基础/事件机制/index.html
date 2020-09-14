@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件机制</title>
+    <html>
+      <head>
+        <script type="text/javascript">
+          /*
+          event对象的属性：
+
+            altKey: false
+            bubbles: true
+            button: 0
+            buttons: 1
+            cancelBubble: false
+            cancelable: true
+            clientX: 390
+            clientY: 25
+            composed: true
+            ctrlKey: false
+            currentTarget: body
+            defaultPrevented: false
+            detail: 1
+            eventPhase: 3
+            fromElement: null
+            isTrusted: true
+            layerX: 390
+            layerY: 25
+            metaKey: false
+            movementX: 0
+            movementY: 0
+            offsetX: 383
+            offsetY: 9
+            pageX: 390
+            pageY: 25
+            path: (5) [p, body, html, document, Window]
+            relatedTarget: null
+            returnValue: true
+            screenX: 390
+            screenY: 136
+            shiftKey: false
+            sourceCapabilities: InputDeviceCapabilities {firesTouchEvents: false}
+            srcElement: p
+            target: p
+            timeStamp: 18529.719999991357
+            toElement: p
+            type: "mousedown"
+            view: Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+            which: 1
+            x: 390
+            y: 25
+            __proto__: MouseEvent
+        */
+          // function getEventType(event) {
+          //   alert(event.bubbles);
+          // }
+          document.getElementById("test").addEventListener(
+            "click",
+            function (event) {
+              console.log(event);
+            },
+            true
+          );
+        </script>
+      </head>
+
+      <body id="test">
+        <p>
+          Click somewhere in the document. An alert box will tell if the event
+          is a bubbling event.
+        </p>
+      </body>
+    </html>
+  </head>
+</html>
