@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inline-block</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background-color: navajowhite;
+        /* 解决inline-block产生的间隙问题，同时子元素要定义font-size的值 */
+        font-size: 0;
+      }
+      .left {
+        background-color: red;
+      }
+      .right {
+        background-color: blueviolet;
+      }
+
+      .left,
+      .right {
+        display: inline-block;
+        font-size: 14px;
+      }
+      .left {
+        width: 100px;
+      }
+      .right {
+        width: calc(100% - 100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        this is left
+      </div>
+      <div class="right">
+        this is right
+      </div>
+    </div>
+  </body>
+</html>

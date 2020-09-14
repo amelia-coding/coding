@@ -1,12 +1,10 @@
-var createPromise = function (time) {
-  return () =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        console.log("timein" + time);
-        resolve();
-      }, time * 1000);
-    });
-};
+var createPromise = (time) => () =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("timein" + time);
+      resolve();
+    }, time * 1000);
+  });
 
 function serpromise(arr) {
   arr.reduce((pre, next, index, carr) => {
