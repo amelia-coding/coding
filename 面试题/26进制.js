@@ -12,6 +12,8 @@
 // 52 => AZ
 // 53 => BA
 // 54 => BB
+// 26*26 + 26 => ZZ
+// 1*26*26 + 1 * 26 + 1 => AAA
 // // 实现下方函数
 // function convert() {
 //   // TODO
@@ -28,24 +30,17 @@
 // console.log(output3); // BA
 */
 
-function convert(num) {
-  let chars = "ABCDEFGHIJKLMNOPQRSTUVWSYZ";
-  let str = "";
-  if (num % 26 === 0) {
-    while (num) {
-      str = num % 26 === 0 ? "Z" : chars[(num % 26) - 1] + str;
-      num = Math.floor(num / 26);
-    }
-  } else {
-    while (num) {
-      str = chars[num % 26] + str;
-      num = Math.floor(num / 26);
-    }
+var convertToTitle = function (n) {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let res = [];
+  while (n) {
+    n--; //重点先减一，26进制代表0-25
+    res.unshift(letters[n % 26]);
+    n = (n / 26) | 0;
   }
-  console.log(str.replace("@", ""));
-}
-convert(1);
-convert(26);
-convert(52);
-convert(54);
-convert(26 * 25 + 26 * 25 + 25);
+  return res.toString();
+};
+
+convertToTitle(1 * 26 * 26 + 2 * 26 + 2);
+convertToTitle(1 * 26 + 1);
+convertToTitle(52);
