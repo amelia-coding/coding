@@ -60,7 +60,7 @@ class Events {
    */
   removeListener(type, listener) {
     if (this.events[type]) {
-      this.events[type].filter((l) => l !== listener);
+      this.events[type] = this.events[type].filter((l) => l !== listener);
     }
   }
 }
