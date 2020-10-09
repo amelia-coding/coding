@@ -21,3 +21,12 @@ var arr = [
 ];
 // Promise.resolve().then(createPromise(2)).then(createPromise(1))
 serpromise(arr);
+
+//async
+var fn = async function (arr) {
+  for (let i = 0, len = arr.length; i < len; i++) {
+    var result = await arr[i];
+    console.log(result);
+  }
+};
+fn(arr);
