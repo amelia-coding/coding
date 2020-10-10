@@ -7,8 +7,8 @@ var createPromise = (time) => () =>
   });
 
 function serpromise(arr) {
-  arr.reduce((pre, next, index, carr) => {
-    return pre.then(next); //本质就是不停地调用then
+  arr.reduce((pre, next) => {
+    return pre.then(next).catch(next); //本质就是不停地调用then
   }, Promise.resolve());
 }
 
