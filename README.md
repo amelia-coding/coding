@@ -30,7 +30,7 @@ webpack
 
 ## 常见工具
 
-[parseQueryString](https://github.com/amelia-coding/coding/blob/master/工具类/解析url参数.js)
+[parseQueryString](https://github.com/amelia-coding/coding/blob/master/工具类/解析url参数.js)\
 [对象的链式属性](https://github.com/amelia-coding/coding/blob/master/工具类/对象的链式属性.js)
 
 
