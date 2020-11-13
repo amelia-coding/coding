@@ -35,8 +35,8 @@ var convertToTitle = function (n) {
   let res = [];
   while (n) {
     n--; //重点先减一，26进制代表0-25
-    res.unshift(letters[n % 26]);
-    n = (n / 26) | 0;
+    res.unshift(letters[n % 26]);//取余数
+    n = (n / 26) | 0;//计算下一位
   }
   return res.toString();
 };
