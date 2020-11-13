@@ -10,10 +10,10 @@ function debounce(fn,delay,immediate) {
   const bouned = function (...args) {
     if (timer) clearTimeout(timer);
     if (immediate) {
-      if (!timer) result = fn.apply(this, args);
       timer = setTimeout(() => {
         timer = null;
       }, delay);
+      if (!timer) result = fn.apply(this, args);
     } else {
       timer = setTimeout(() => {
         fn.apply(this, args);
