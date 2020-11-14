@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>实现一个带wave波动的球</title>
+  </head>
+  <style>
+    .wave {
+      height: 110px;
+      width: 110px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 50%;
+      z-index: 1;
+      overflow: hidden;
+      background-color: burlywood;
+    }
+    svg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.7;
+    }
+  </style>
+  <body>
+    <div class="wave">
+      <svg width="110px" height="165px" version="1.1">
+        <defs>
+          <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#f0e4ff" />
+            <stop offset="100%" stop-color="#d6fcfc" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#myGradient)"
+          d="M 0 55 Q 27.5 45, 55 55 Q 82.5 65, 110 55 L 110 165 L 0 165 L 0 55"
+        >
+          <animate
+            dur="3s"
+            repeatCount="indefinite"
+            attributeName="d"
+            attributeType="XML"
+            values="
+          M 0 55 Q 27.5 45, 55 55 Q 82.5 65, 110 55 L 110 165 L 0 165 L 0 55;
+          M 0 55 Q 27.5 65, 55 55 Q 82.5 45, 110 55 L 110 165 L 0 165 L 0 55;
+          M 0 55 Q 27.5 45, 55 55 Q 82.5 65, 110 55 L 110 165 L 0 165 L 0 55"
+          ></animate>
+        </path>
+      </svg>
+    </div>
+  </body>
+</html>
