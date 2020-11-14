@@ -1,8 +1,12 @@
 const data = {
   name: 'dujuan',
   score: 100,
+  friend: {
+    name: 'lily',
+    score: 9,
+  },
 }
-const str = 'hello, {{ name }} , you have got the {{ score }}!'
+const str = 'hello, {{ name }} , you have got the {{ score }} ,your friend got {{friend.score}}'
 
 /*
 1.正则匹配
@@ -10,7 +14,12 @@ const str = 'hello, {{ name }} , you have got the {{ score }}!'
 
 function template(str, data) {
   return str.replace(/\{\{(.*?)\}\}/g, (match, key) => {
-    return data[key.trim()]
+    var paths = key.trim().split('.')
+    var lookup = data
+    while (paths.length > 0) {
+      lookup = lookup[paths.shift()]
+    }
+    return lookup || data[key.trim()]
   })
 }
 
