@@ -56,12 +56,14 @@
           // function getEventType(event) {
           //   alert(event.bubbles);
           // }
-          document.getElementById("test").addEventListener(
+          const el = document.getElementById("id");
+          el.onclick = function (event) {};
+          el.addEventListener(
             "click",
             function (event) {
               console.log(event);
             },
-            true
+            false
           );
         </script>
       </head>
