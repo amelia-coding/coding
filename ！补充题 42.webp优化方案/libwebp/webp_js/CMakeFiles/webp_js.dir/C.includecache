@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/webp/decode.h
+./types.h
+../src/webp/types.h
+
+../src/webp/types.h
+stddef.h
+-
+inttypes.h
+-
+
+/Users/dzsb-002432/Documents/github/libwebp/extras/webp_to_sdl.c
+src/webp/config.h
+/Users/dzsb-002432/Documents/github/libwebp/extras/src/webp/config.h
+webp_to_sdl.h
+/Users/dzsb-002432/Documents/github/libwebp/extras/webp_to_sdl.h
+stdio.h
+-
+src/webp/decode.h
+/Users/dzsb-002432/Documents/github/libwebp/extras/src/webp/decode.h
+SDL.h
+-
+SDL/SDL.h
+-
+
+/Users/dzsb-002432/Documents/github/libwebp/extras/webp_to_sdl.h
+
+src/webp/config.h
+

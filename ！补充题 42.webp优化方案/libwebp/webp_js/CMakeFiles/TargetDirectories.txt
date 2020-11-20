@@ -1,0 +1,17 @@
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/install/strip.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/install/local.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/install.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/rebuild_cache.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/edit_cache.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webp_wasm.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webputils.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webp_js.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webpdemux.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/list_install_components.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webpdsp.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webpencode.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webpdspdecode.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webpdecoder.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webp.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webputilsdecode.dir
+/Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/webpdecode.dir

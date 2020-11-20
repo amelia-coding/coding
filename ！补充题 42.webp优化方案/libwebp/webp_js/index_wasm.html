@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>simple Javascript WebP decoding demo, using Web-Assembly (WASM)</title>
+  <script type="text/javascript">
+    var Module = {
+      noInitialRun: true,
+      canvas: document.createElement('canvas'),
+    }
+  </script>
+  <!-- <script src='webp_wasm.js'></script> -->
+  <script type="text/javascript">
+    let start, end
+    function decode(webp_data, canvas_id) {
+      console.log(Module.asm)
+      if (Module['asm'] != undefined) {
+        // wrapper for the function decoding a WebP into a canvas object
+        Module.canvas = document.createElement('canvas')
+        const WebpToCanvas = Module.cwrap('WebpToSDL', 'number', ['array', 'number'])
+        end = new Date()
+        var ret = WebpToCanvas(webp_data, webp_data.length)
+        document.getElementById('img').src = Module.canvas.toDataURL()
+        console.log(end - start)
+      }
+    }
+
+    async function loadfile(filename) {
+      if (!Module['asm']) {
+        console.log('fetching..')
+        await fetchWasm()
+      }
+      start = new Date()
+      fetch(filename)
+        .then(function (response) {
+          return response.arrayBuffer() // 可以根据使用场景更换为 response.arrayBuffer()、response.text()、response.formData()、response.json()、response.text()
+        })
+        .then(function (arraybuffer) {
+          var webp_data = new Uint8Array(arraybuffer)
+          decode(webp_data)
+        })
+    }
+
+    function fetchWasm() {
+      return fetch('./webp_wasm.wasm')
+        .then(function (response) {
+          return response.arrayBuffer() // 可以根据使用场景更换为 response.arrayBuffer()、response.text()、response.formData()、response.json()、response.text()
+        })
+        .then(function (arraybuffer) {
+          Module.wasmBinary = arraybuffer
+          var script = document.createElement('script')
+          script.src = 'webp_wasm.js'
+          document.body.appendChild(script)
+        })
+    }
+
+    loadfile('https://p5.hibixin.com/bx-content/674804df127f4e4b8bee50253799c545.png?imageView2/0/format/webp')
+  </script>
+</head>
+
+<body>
+  <p><strong>WebP demo using Web-Assembly</strong> -</p>
+  <h1>解码base64</h1>
+  <img id="img" alt="" srcset="" />
+  <button
+    onclick="loadfile('https://p5.hibixin.com/bx-content/674804df127f4e4b8bee50253799c545.png?imageView2/0/format/webp')">
+    111
+  </button>
+</body>
+
+</html>

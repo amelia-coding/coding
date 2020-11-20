@@ -1,0 +1,1 @@
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc -DNDEBUG -O2 -O2 -s WASM=0        -s EXPORTED_FUNCTIONS='["_WebpToSDL"]' -s INVOKE_RUN=0        -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' @CMakeFiles/webp_js.dir/objects1.rsp -o webp.js @CMakeFiles/webp_js.dir/linklibs.rsp

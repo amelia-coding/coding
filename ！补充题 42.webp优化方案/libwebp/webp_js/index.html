@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>simple Javascript WebP decoding demo</title>
+    <script type="text/javascript">
+      var Module = {
+        noInitialRun: true,
+        canvas: document.createElement('canvas'),
+      }
+    </script>
+    <script type="text/javascript" src="./webp.js"></script>
+    <script type="text/javascript">
+      function decode(webp_data) {
+        console.log(Module.noInitialRun)
+        const WebpToCanvas = Module.cwrap('WebpToSDL', 'number', ['array', 'number'])
+        WebpToCanvas(webp_data, webp_data.length)
+        document.getElementById('image').src = Module.canvas.toDataURL()
+      }
+
+      function loadfile(filename) {
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', 'https://p5.hibixin.com/bx-content/674804df127f4e4b8bee50253799c545.png?imageView2/0/format/webp')
+        xhr.responseType = 'arraybuffer'
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            var webp_data = new Uint8Array(xhr.response)
+            decode(webp_data)
+          }
+        }
+        xhr.send()
+      }
+      loadfile('./test_webp_js.webp')
+    </script>
+  </head>
+
+  <body>
+    <img id="image" alt="" srcset="" />
+    <canvas id="output_canvas">Your browser does not support canvas</canvas>
+  </body>
+</html>

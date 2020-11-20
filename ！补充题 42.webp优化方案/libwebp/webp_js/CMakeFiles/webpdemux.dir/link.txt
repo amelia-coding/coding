@@ -1,0 +1,2 @@
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emar qc libwebpdemux.a CMakeFiles/webpdemux.dir/src/demux/anim_decode.c.o CMakeFiles/webpdemux.dir/src/demux/demux.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emranlib libwebpdemux.a

@@ -1,0 +1,248 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Darwin - 19.6.0 - x86_64
+Performing C SOURCE FILE Test HAVE_BUILTIN_BSWAP16 succeeded with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_219c9/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_219c9.dir/build.make CMakeFiles/cmTC_219c9.dir/build
+Building C object CMakeFiles/cmTC_219c9.dir/src.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc   -DHAVE_BUILTIN_BSWAP16 -o CMakeFiles/cmTC_219c9.dir/src.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_219c9.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_219c9.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc  -DHAVE_BUILTIN_BSWAP16 @CMakeFiles/cmTC_219c9.dir/objects1.rsp -o cmTC_219c9.js 
+
+
+Source file was:
+
+    int main(void) {
+      (void)__builtin_bswap16(0);
+      return 0;
+    }
+  
+Performing C SOURCE FILE Test HAVE_BUILTIN_BSWAP32 succeeded with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2b5b4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2b5b4.dir/build.make CMakeFiles/cmTC_2b5b4.dir/build
+Building C object CMakeFiles/cmTC_2b5b4.dir/src.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc   -DHAVE_BUILTIN_BSWAP32 -o CMakeFiles/cmTC_2b5b4.dir/src.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2b5b4.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b5b4.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc  -DHAVE_BUILTIN_BSWAP32 @CMakeFiles/cmTC_2b5b4.dir/objects1.rsp -o cmTC_2b5b4.js 
+
+
+Source file was:
+
+    int main(void) {
+      (void)__builtin_bswap32(0);
+      return 0;
+    }
+  
+Performing C SOURCE FILE Test HAVE_BUILTIN_BSWAP64 succeeded with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4433b/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4433b.dir/build.make CMakeFiles/cmTC_4433b.dir/build
+Building C object CMakeFiles/cmTC_4433b.dir/src.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc   -DHAVE_BUILTIN_BSWAP64 -o CMakeFiles/cmTC_4433b.dir/src.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4433b.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4433b.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc  -DHAVE_BUILTIN_BSWAP64 @CMakeFiles/cmTC_4433b.dir/objects1.rsp -o cmTC_4433b.js 
+
+
+Source file was:
+
+    int main(void) {
+      (void)__builtin_bswap64(0);
+      return 0;
+    }
+  
+Performing C SOURCE FILE Test HAVE_MATH_LIBRARY succeeded with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_14e78/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_14e78.dir/build.make CMakeFiles/cmTC_14e78.dir/build
+Building C object CMakeFiles/cmTC_14e78.dir/src.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc   -DHAVE_MATH_LIBRARY -o CMakeFiles/cmTC_14e78.dir/src.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_14e78.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14e78.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc  -DHAVE_MATH_LIBRARY @CMakeFiles/cmTC_14e78.dir/objects1.rsp -o cmTC_14e78.js 
+
+
+Source file was:
+
+    #include <math.h>
+    int main(int argc, char** argv) {
+      return (int)pow(argc, 2.5);
+    }
+  
+Determining if files stdlib.h;stdarg.h;string.h;float.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7f87a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7f87a.dir/build.make CMakeFiles/cmTC_7f87a.dir/build
+Building C object CMakeFiles/cmTC_7f87a.dir/STDC_HEADERS.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_7f87a.dir/STDC_HEADERS.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/STDC_HEADERS.c
+Linking C executable cmTC_7f87a.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f87a.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_7f87a.dir/objects1.rsp -o cmTC_7f87a.js 
+
+
+
+Determining if files dlfcn.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_58c69/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_58c69.dir/build.make CMakeFiles/cmTC_58c69.dir/build
+Building C object CMakeFiles/cmTC_58c69.dir/HAVE_DLFCN_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_58c69.dir/HAVE_DLFCN_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_DLFCN_H.c
+Linking C executable cmTC_58c69.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58c69.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_58c69.dir/objects1.rsp -o cmTC_58c69.js 
+
+
+
+Determining if files GL/glut.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_982b7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_982b7.dir/build.make CMakeFiles/cmTC_982b7.dir/build
+Building C object CMakeFiles/cmTC_982b7.dir/HAVE_GL_GLUT_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_982b7.dir/HAVE_GL_GLUT_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_GL_GLUT_H.c
+Linking C executable cmTC_982b7.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_982b7.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_982b7.dir/objects1.rsp -o cmTC_982b7.js 
+
+
+
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fac7a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fac7a.dir/build.make CMakeFiles/cmTC_fac7a.dir/build
+Building C object CMakeFiles/cmTC_fac7a.dir/HAVE_INTTYPES_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_fac7a.dir/HAVE_INTTYPES_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_INTTYPES_H.c
+Linking C executable cmTC_fac7a.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fac7a.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_fac7a.dir/objects1.rsp -o cmTC_fac7a.js 
+
+
+
+Determining if files memory.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e2618/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e2618.dir/build.make CMakeFiles/cmTC_e2618.dir/build
+Building C object CMakeFiles/cmTC_e2618.dir/HAVE_MEMORY_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_e2618.dir/HAVE_MEMORY_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_MEMORY_H.c
+Linking C executable cmTC_e2618.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2618.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_e2618.dir/objects1.rsp -o cmTC_e2618.js 
+
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_be65d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_be65d.dir/build.make CMakeFiles/cmTC_be65d.dir/build
+Building C object CMakeFiles/cmTC_be65d.dir/HAVE_STDINT_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_be65d.dir/HAVE_STDINT_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c
+Linking C executable cmTC_be65d.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be65d.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_be65d.dir/objects1.rsp -o cmTC_be65d.js 
+
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_45163/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_45163.dir/build.make CMakeFiles/cmTC_45163.dir/build
+Building C object CMakeFiles/cmTC_45163.dir/HAVE_STDLIB_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_45163.dir/HAVE_STDLIB_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_STDLIB_H.c
+Linking C executable cmTC_45163.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45163.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_45163.dir/objects1.rsp -o cmTC_45163.js 
+
+
+
+Determining if files strings.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d2542/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d2542.dir/build.make CMakeFiles/cmTC_d2542.dir/build
+Building C object CMakeFiles/cmTC_d2542.dir/HAVE_STRINGS_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_d2542.dir/HAVE_STRINGS_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_STRINGS_H.c
+Linking C executable cmTC_d2542.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2542.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_d2542.dir/objects1.rsp -o cmTC_d2542.js 
+
+
+
+Determining if files string.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_38c72/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_38c72.dir/build.make CMakeFiles/cmTC_38c72.dir/build
+Building C object CMakeFiles/cmTC_38c72.dir/HAVE_STRING_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_38c72.dir/HAVE_STRING_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_STRING_H.c
+Linking C executable cmTC_38c72.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38c72.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_38c72.dir/objects1.rsp -o cmTC_38c72.js 
+
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_45305/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_45305.dir/build.make CMakeFiles/cmTC_45305.dir/build
+Building C object CMakeFiles/cmTC_45305.dir/HAVE_SYS_STAT_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_45305.dir/HAVE_SYS_STAT_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_SYS_STAT_H.c
+Linking C executable cmTC_45305.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45305.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_45305.dir/objects1.rsp -o cmTC_45305.js 
+
+
+
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9b7a1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9b7a1.dir/build.make CMakeFiles/cmTC_9b7a1.dir/build
+Building C object CMakeFiles/cmTC_9b7a1.dir/HAVE_SYS_TYPES_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_9b7a1.dir/HAVE_SYS_TYPES_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c
+Linking C executable cmTC_9b7a1.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b7a1.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_9b7a1.dir/objects1.rsp -o cmTC_9b7a1.js 
+
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d0361/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d0361.dir/build.make CMakeFiles/cmTC_d0361.dir/build
+Building C object CMakeFiles/cmTC_d0361.dir/HAVE_UNISTD_H.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc    -o CMakeFiles/cmTC_d0361.dir/HAVE_UNISTD_H.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CheckIncludeFiles/HAVE_UNISTD_H.c
+Linking C executable cmTC_d0361.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0361.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_d0361.dir/objects1.rsp -o cmTC_d0361.js 
+
+
+
+Performing C SOURCE FILE Test HAS_COMPILE_FLAG succeeded with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b1452/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b1452.dir/build.make CMakeFiles/cmTC_b1452.dir/build
+Building C object CMakeFiles/cmTC_b1452.dir/src.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc   -DHAS_COMPILE_FLAG -mdspr2   -mno-dspr2 -o CMakeFiles/cmTC_b1452.dir/src.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp/src.c
+clang-12: warning: argument unused during compilation: '-mdspr2' [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-mno-dspr2' [-Wunused-command-line-argument]
+Linking C executable cmTC_b1452.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1452.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc  -DHAS_COMPILE_FLAG -mdspr2 @CMakeFiles/cmTC_b1452.dir/objects1.rsp -o cmTC_b1452.js 
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAS_COMPILE_FLAG succeeded with the following output:
+Change Dir: /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9f930/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9f930.dir/build.make CMakeFiles/cmTC_9f930.dir/build
+Building C object CMakeFiles/cmTC_9f930.dir/src.c.o
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc   -DHAS_COMPILE_FLAG -mmsa   -mno-msa -o CMakeFiles/cmTC_9f930.dir/src.c.o -c /Users/dzsb-002432/Documents/github/libwebp/webp_js/CMakeFiles/CMakeTmp/src.c
+clang-12: warning: argument unused during compilation: '-mmsa' [-Wunused-command-line-argument]
+clang-12: warning: argument unused during compilation: '-mno-msa' [-Wunused-command-line-argument]
+Linking C executable cmTC_9f930.js
+/usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f930.dir/link.txt --verbose=1
+/Users/dzsb-002432/Documents/emsdk/upstream/emscripten/emcc  -DHAS_COMPILE_FLAG -mmsa @CMakeFiles/cmTC_9f930.dir/objects1.rsp -o cmTC_9f930.js 
+
+
+Source file was:
+int main(void) { return 0; }
