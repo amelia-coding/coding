@@ -24,15 +24,12 @@ let merge = (intervals) => {
   const len = intervals.length
   if (len === 0) return []
   // 排序
-  intervals.sort((s1, s2) => {
-    return s1[0] - s2[0]
-  })
-  let arr = []
-  arr.push(intervals[0])
+  intervals.sort((s1, s2) => s1[0] - s2[0])
+  let arr = [intervals[0]]
   for (let i = 1; i < len; i++) {
     const arrLen = arr.length
     if (intervals[i][0] <= arr[arrLen - 1][1]) {
-      arr[arrLen - 1][1] = intervals[i][1] > arr[arrLen - 1][1] ? intervals[i][1] : arr[arrLen - 1][1]
+      arr[arrLen - 1][1] = Math.max(intervals[i][1], arr[arrLen - 1][1])
     } else {
       arr.push(intervals[i])
     }
