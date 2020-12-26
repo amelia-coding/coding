@@ -2,7 +2,6 @@
 56. 合并区间
 给出一个区间的集合，请合并所有重叠的区间。
 
- 
 
 示例 1:
 
@@ -17,29 +16,26 @@
 注意：输入类型已于2019年4月15日更改。 请重置默认代码定义以获取新方法签名。
 */
 
-/**
+/** 区间题目
  * @param {number[][]} intervals
  * @return {number[][]}
  */
 let merge = (intervals) => {
-  const len = intervals.length;
-  if (len === 0) return [];
+  const len = intervals.length
+  if (len === 0) return []
   // 排序
   intervals.sort((s1, s2) => {
-    return s1[0] - s2[0];
-  });
-  let arr = [];
-  arr.push(intervals[0]);
+    return s1[0] - s2[0]
+  })
+  let arr = []
+  arr.push(intervals[0])
   for (let i = 1; i < len; i++) {
-    const arrLen = arr.length;
+    const arrLen = arr.length
     if (intervals[i][0] <= arr[arrLen - 1][1]) {
-      arr[arrLen - 1][1] =
-        intervals[i][1] > arr[arrLen - 1][1]
-          ? intervals[i][1]
-          : arr[arrLen - 1][1];
+      arr[arrLen - 1][1] = intervals[i][1] > arr[arrLen - 1][1] ? intervals[i][1] : arr[arrLen - 1][1]
     } else {
-      arr.push(intervals[i]);
+      arr.push(intervals[i])
     }
   }
-  return arr;
-};
+  return arr
+}
