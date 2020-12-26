@@ -29,13 +29,13 @@ var search = function (nums, target) {
   while (lo <= hi) {
     let mid = (lo + (hi - lo) / 2) | 0
     if (nums[mid] === target) return mid
-    if (nums[mid] >= nums[lo]) {
+    if (nums[mid] >= nums[lo]) {//上升段
       if (target >= nums[lo] && target < nums[mid]) {
         hi = mid - 1
       } else {
         lo = mid + 1
       }
-    } else {
+    } else {//下降段
       if (target > nums[mid] && target <= nums[hi]) {
         lo = mid + 1
       } else {
