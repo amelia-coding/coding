@@ -35,9 +35,10 @@ var combinationSum = function (candidates, target) {
   return res;
 };
 
-function dfs(candidates, target, start, solution, res) {
+function dfs(candidates, target, start, solution, res) {//start的目的是为了不再使用已选中的元素
   if (target === 0) {
     res.push(solution.slice());
+    return
   } else if (target < 0) {
     return;
   }
