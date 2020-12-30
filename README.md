@@ -78,6 +78,10 @@
 
 矩阵中的路径 \ 岛屿数量 \ 机器人的运动范围
 
+`子数组`
+
+前缀和\滑动窗口\动态规划
+
 ## NodeJS
 
 [实现一个 koa2](https://github.com/amelia-coding/coding/blob/master/Nodejs/实现koa/like-koa2.js)
