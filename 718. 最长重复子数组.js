@@ -103,7 +103,6 @@ const findLength = (A, B) => {
       } else {
         dp[j] = 0
       }
-
       res = Math.max(dp[j], res)
     }
     console.log(dp)
