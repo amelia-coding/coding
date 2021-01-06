@@ -22,30 +22,36 @@ DOM 的体积过大会影响页面性能，
 navigator.sendBeacon() 方法可用于通过HTTP将少量数据异步传输到Web服务器。
 1、不拖延卸载流程
 */
-window.addEventListener('unload', logData, false);
+window.addEventListener('unload', logData, false)
 function logData() {
-  navigator.sendBeacon("/log", analyticsData);
-}
-
-(function(){
-  const root  = document.documentElement
-  let queue = [root]
-  let maxDeep = 0,maxChildNum = 0
-  let totalNode = 0
-  while(queue.length) {
-    let len = queue.length
-    totalNode += len
-    while(len) {
-      const node = queue.shift()
-      const children = node.children
-      if(children.length > 0) {
-        queue.push(...children)
-        maxChildNum = Math.max(maxChildNum,children.length)
+  navigator.sendBeacon(
+    '/log',
+    (function () {
+      const root = document.documentElement
+      let queue = [root]
+      let maxDeep = 0,
+        maxChildNum = 0,
+        totalNode = 0
+      while (queue.length) {
+        let len = queue.length
+        totalNode += len
+        while (len) {
+          const node = queue.shift()
+          const children = node.children
+          if (children.length > 0) {
+            queue.push(...children)
+            maxChildNum = Math.max(maxChildNum, children.length)
+          }
+          len--
+        }
+        maxDeep++
       }
-      len--
-    }
-    maxDeep++
-  }
-  console.log(maxDeep,maxChildNum,totalNode)
-})()
-
+      console.log(maxDeep, maxChildNum, totalNode)
+      return JSON.stringify({
+        maxDeep,
+        maxChildNum,
+        totalNode,
+      })
+    })()
+  )
+}
