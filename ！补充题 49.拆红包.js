@@ -8,10 +8,11 @@ function random(min, max) {
 function allocate(m, n) {
   if (m / n < 0.01) return
   let res = []
-  for (let i = 0; i < n; i++) {
+  for (let i = 0, len = n; i < len; i++) {
     res[i] = random(0.01, (m / n) * 2) //当前分配红包的范围是0.01 - 剩余金额平均值*2
     m = (m - res[i]).toFixed(2)
-    console.log(`第${i + 1}人分配: ${res[i]},剩余: ${m}`)
+    n--
+    console.log(`第${i + 1}人分配: ${res[i]},剩余金额: ${m}，待分配：${n}人`)
   }
   return res
 }
