@@ -41,9 +41,9 @@ mapLimit(dataLists, 3, (curItem) => {
  * @params asyncHandle {Function} - 对`list`的每一个项的处理函数，参数为当前处理项，必须 return 一个Promise来确定是否继续进行迭代
  * @return {Promise} - 返回一个 Promise 值来确认所有数据是否迭代完成
  */
-let mapLimit = (urls, limit, asyncHandle) => {
+let mapLimit = (urls, limit) => {
   let recursion = (urls) => {
-    return asyncHandle(urls.shift()).then(() => {
+    return fetch(urls.shift()).then(() => {
       // 数组还未迭代完，递归继续进行迭代
       if (urls.length !== 0) return recursion(urls);
       else return "finish";
@@ -57,8 +57,4 @@ let mapLimit = (urls, limit, asyncHandle) => {
   return Promise.all(asyncList); // 所有并发异步操作都完成后，本次并发控制迭代完成
 };
 
-function asyncHandle(url) {
-  return fetch(url);
-}
-
-mapLimit(urls, limit, asyncHandle);
+mapLimit(urls, limit);
