@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>穿梭框</title>
+  </head>
+  <body>
+    <ul id="shuttle_box">
+      <li class="shuttle_box_li shuttle_box_near">
+        <ul id="shuttle_box_left">
+          <li>left1</li>
+          <li>left2</li>
+          <li>left3</li>
+          <li>left4</li>
+        </ul>
+      </li>
+      <div id="shuttle_box_mid">
+        <button id="shuttle_box_toRight">></button>
+        <button id="shuttle_box_toLeft"><</button>
+      </div>
+      <li class="shuttle_box_li shuttle_box_near">
+        <ul id="shuttle_box_right">
+          <li>right1</li>
+          <li>right2</li>
+          <li>right3</li>
+          <li>right4</li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      //相关api：
+      //document.getElementById,
+      //classList.add,
+      //document.querySelectorAll,
+      //parent.removeChild(node)
+      //targetParent.appendChild(node)
+      document.querySelectorAll('.shuttle_box_li').forEach((item) => {
+        item.addEventListener('click', function (event) {
+          event.target.classList.add('active')
+        })
+      })
+      document.getElementById('shuttle_box_toRight').addEventListener('click', function () {
+        const nodeList = document.querySelectorAll('#shuttle_box_left .active')
+        const parent = document.getElementById('shuttle_box_left')
+        const targetParent = document.getElementById('shuttle_box_right')
+        nodeList.forEach((node) => {
+          parent.removeChild(node)
+          targetParent.appendChild(node)
+        })
+      })
+
+      document.getElementById('shuttle_box_toLeft').addEventListener('click', function () {
+        const nodeList = document.querySelectorAll('#shuttle_box_right .active')
+        const parent = document.getElementById('shuttle_box_right')
+        const targetParent = document.getElementById('shuttle_box_left')
+        nodeList.forEach((node) => {
+          parent.removeChild(node)
+          targetParent.appendChild(node)
+        })
+      })
+    </script>
+  </body>
+</html>
