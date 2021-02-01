@@ -18,17 +18,32 @@
 // }
 
 // console.log(add(1)(2).getValue())
-function curry(sum = 0, ...args) {
-  function back(..._args) {
-    _args.unshift(...args)
+// function curry(sum = 0, ...args) {
+//   function back(..._args) {
+//     _args.unshift(...args)
+//     console.log(_args)
+//     sum = _args.reduce((a, b) => a + b, 0)
+//     return curry(sum, ..._args)
+//   }
+//   back.getValue = function () {
+//     return sum
+//   }
+//   return back
+// }
+// const add = curry()
+// console.log(add(1, 3)(2).getValue())
+
+function add(...args0) {
+  let _args = args0
+  function inner(...args1) {
+    _args.unshift(...args1)
     console.log(_args)
-    sum = _args.reduce((a, b) => a + b, 0)
-    return curry(sum, ..._args)
+    return inner
   }
-  back.getValue = function () {
-    return sum
+  inner.getValue = function () {
+    return _args.reduce((a, b) => a + b, 0)
   }
-  return back
+  return inner
 }
-const add = curry()
+
 console.log(add(1, 3)(2).getValue())
