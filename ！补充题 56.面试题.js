@@ -1,5 +1,5 @@
 let templ = `name is {obj.a}
-age is {obj.b.c}
+age is { obj.b.c}
 address is {obj.c.d}
 phone is {obj2.a}
 `
@@ -17,7 +17,7 @@ function render(templ, data) {
     let keys = group.split('.')
     let temp = data
     for (let key of keys) {
-      temp = temp[key]
+      temp = temp[key.trim()] 
       if (temp === undefined) break
     }
     return JSON.stringify(temp !== undefined ? temp : group)
