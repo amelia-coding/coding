@@ -15,15 +15,12 @@ var data = {
 function render(templ, data) {
   return templ.replace(/\{(.*?)\}/g, (match, group) => {
     let keys = group.split('.')
-    let temp = data,flag = true
+    let temp = data
     for (let key of keys) {
       temp = temp[key]
-      if (temp === undefined) {
-        flag = false
-        break
-      }
+      if (temp === undefined) break
     }
-    return JSON.stringify(flag && temp !== undefined ? temp : group)
+    return JSON.stringify(temp !== undefined ? temp : group)
   })
 }
 
