@@ -64,7 +64,8 @@ var rotate = function(matrix) {
 
 
 /*翻转
-matrix[row][col]
+matrix[col][n−row−1]=matrix[row][col]
+
 水平轴翻转
  matrix[n−row−1][col]
 主对角线翻转
