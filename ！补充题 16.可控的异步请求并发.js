@@ -34,11 +34,14 @@
 // }).then((response) => {
 //   console.log("finish", response);
 // });
-
+let res = []
 const myfetch = (url)=>{
+  res.push(url)
+  //console.log(res)
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve();
+      resolve(url);
+      //res.splice(res.indexOf(url),1)
     }, Math.random() * 5000);
   });
 }
@@ -51,10 +54,9 @@ const myfetch = (url)=>{
 let mapLimit = (urls, limit) => {
   let recursion = (urls) => {
     return myfetch(urls.shift()).then(() => {
-      console.log(urls)
       // 数组还未迭代完，递归继续进行迭代
+      console.log(urls)
       if (urls.length !== 0) return recursion(urls);
-      else return "finish";
     });
   };
 
@@ -62,7 +64,7 @@ let mapLimit = (urls, limit) => {
   while (limit--) {
     asyncList.push(recursion(urls));
   }
-  return Promise.all(asyncList); // 所有并发异步操作都完成后，本次并发控制迭代完成
+  Promise.all(asyncList); // 所有并发异步操作都完成后，本次并发控制迭代完成
 };
 
-mapLimit([1,2,3,4,5,6,7,8,9,10,11], 3);
+mapLimit([1,2,3,4,5,6,7,8,9,10], 2)
