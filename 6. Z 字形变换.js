@@ -50,7 +50,10 @@ var convert = function (s, numRows) {
     rows[loc] += c
     if (loc == 0 || loc == numRows - 1) down = !down
     loc += down ? 1 : -1
+    // console.log(rows)
   }
   console.log(rows)
   return rows.join('')
 }
+
+convert("LEETCODEISHIRING", 4)
