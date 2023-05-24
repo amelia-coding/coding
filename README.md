@@ -78,7 +78,8 @@
 
 [146. LRU 缓存机制](https://github.com/amelia-coding/coding/blob/master/146.%20LRU缓存机制.js)
 
-类型
+
+### Leetcode总结
 
 - `双指针` 同向指针 \ 双向指针 \ 指针保存的是元素的索引位置
 - `矩阵深搜系列` 矩阵中的路径 \ 岛屿数量 \ 机器人的运动范围
