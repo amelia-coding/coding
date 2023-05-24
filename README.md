@@ -17,14 +17,12 @@
 
 二叉树进阶
 
-[236. 二叉树的最近公共祖先]()\
-[110. 平衡二叉树]()\
-[111. 二叉树的最小深度]()\
-[104. 二叉树的最大深度]()\
-[101. 对称二叉树]()\
-[112. 路径总和]()\
-[113. 路径总和 II]()\
-[字节一面：给定一个二叉树, 找到该树中两个指定节点间的最短距离](https://github.com/sisterAn/JavaScript-Algorithms/issues/82)
+[236. 二叉树的最近公共祖先](https://github.com/amelia-coding/coding/blob/master/236.%20二叉树的最近公共祖先.js)\
+[110. 平衡二叉树](https://github.com/amelia-coding/coding/blob/master/110.%20平衡二叉树.js)\
+[111. 二叉树的最小深度](https://github.com/amelia-coding/coding/blob/master/111.%20二叉树的最小深度.js)\
+[104. 二叉树的最大深度](https://github.com/amelia-coding/coding/blob/master/104.%20二叉树的最大深度.js)\
+[112. 路径总和](https://github.com/amelia-coding/coding/blob/master/112.%20路径总和.js)\
+[113. 路径总和 II](https://github.com/amelia-coding/coding/blob/master/113.%20路径总和%20II.js)\
 
 链表
 
@@ -69,29 +67,18 @@
 [57. 插入区间]()\
 [252. 会议室]()
 
-总结
+## 类型
 
-`双指针`
+- `双指针` 同向指针 \ 双向指针 \ 指针保存的是元素的索引位置
+- `矩阵深搜系列` 矩阵中的路径 \ 岛屿数量 \ 机器人的运动范围
+- `子数组` 前缀和\滑动窗口\动态规划
 
-同向指针 \ 双向指针 \ 指针保存的是元素的索引位置
-
-`矩阵深搜系列`
-
-矩阵中的路径 \ 岛屿数量 \ 机器人的运动范围
-
-`子数组`
-
-前缀和\滑动窗口\动态规划
-
-## NodeJS
+## 面试题
 
 [实现一个 koa2](https://github.com/amelia-coding/coding/blob/master/Nodejs/实现koa/like-koa2.js)
-
-## 常见工具
-
 [parseQueryString](https://github.com/amelia-coding/coding/blob/master/工具类/解析url参数.js)\
 [对象的链式属性](https://github.com/amelia-coding/coding/blob/master/工具类/对象的链式属性.js)
 
-
+[字节一面：给定一个二叉树, 找到该树中两个指定节点间的最短距离](https://github.com/sisterAn/JavaScript-Algorithms/issues/82)
 
 
