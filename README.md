@@ -1,6 +1,7 @@
 # 前端代码
 
 该项目包含了前端的一些常用的 `JS`、`CSS`、`JS 库`、以及`算法`的代码实现
+
 ## Leetcode
 
 二叉树
@@ -12,7 +13,7 @@
 [105. 前序中序构建二叉树]()\
 [889. 前序后序构建二叉树]()\
 [199. 二叉树的右视图]()\
-[28. 对称的二叉树](https://github.com/amelia-coding/coding/blob/master/%E7%AE%97%E6%B3%95/leetcode/28.对称的二叉树.js)
+[101. 对称二叉树](https://github.com/amelia-coding/coding/blob/master/101.%20对称二叉树.js?_blank)
 
 二叉树进阶
 
