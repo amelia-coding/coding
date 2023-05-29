@@ -4,11 +4,17 @@
 
 ## 1. 补充题
 [1.生成6位验证码](https://github.com/amelia-coding/coding/blob/master/！补充题%201.生成6位验证码.js)\
+[7. 实现一个 koa2](https://github.com/amelia-coding/coding/blob/master/！补充题%207.Nodejs/实现一个koa/like-koa2.js)\
 [10.打印子节点](https://github.com/amelia-coding/coding/blob/master/！补充题%2010.打印子节点.js.js)\
 [11.二维数组的排列组合](https://github.com/amelia-coding/coding/blob/master/！补充题%2011.二维数组的排列组合.js)\
 [12.生成随机字符串](https://github.com/amelia-coding/coding/blob/master/！补充题%2012.生成随机字符串.js)\
-[7. 实现一个 koa2](https://github.com/amelia-coding/coding/blob/master/！补充题%207.Nodejs/实现一个koa/like-koa2.js)\
+[13.团灭6道股票题](https://github.com/amelia-coding/coding/blob/master/！补充题%2013.团灭6道股票题.js)\
+[14.解析上传的excel表格](https://github.com/amelia-coding/coding/blob/master/！补充题%2014.解析上传的excel表格.js)\
 [15. parseQueryString](https://github.com/amelia-coding/coding/blob/master/！补充题%2015.解析url参数.js)\
+[16.可控的异步请求并发](https://github.com/amelia-coding/coding/blob/master/！补充题%2016.可控的异步请求并发.js)\
+[17. 给子节点添加父节点ID](https://github.com/amelia-coding/coding/blob/master/！补充题%2017.给子节点添加父节点ID.js)\
+[18.求数组中能两两相除的最长子序列](https://github.com/amelia-coding/coding/blob/master/！补充题%2018.求数组中能两两相除的最长子序列.js)\
+[19.实现数组的多种去重方法](https://github.com/amelia-coding/coding/blob/master/！补充题%2019.实现数组的多种去重方法.js)\
 [22. 获取对象的链式属性](https://github.com/amelia-coding/coding/blob/master/！补充题%2022.获取对象的链式属性.js)
 
 ## 2. 面试题
