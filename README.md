@@ -5,8 +5,8 @@
 ## 1. 补充题
 [1.生成6位验证码](https://github.com/amelia-coding/coding/blob/master/！补充题%201.生成6位验证码.js)\
 [10.打印子节点](https://github.com/amelia-coding/coding/blob/master/！补充题%2010.打印子节点.js.js)\
-[11.二维数组的排列组合](https://github.com/amelia-coding/coding/blob/master/！补充题%2011.二维数组的排列组合.js)
-[12.生成随机字符串](https://github.com/amelia-coding/coding/blob/master/！补充题%2012.生成随机字符串.js)
+[11.二维数组的排列组合](https://github.com/amelia-coding/coding/blob/master/！补充题%2011.二维数组的排列组合.js)\
+[12.生成随机字符串](https://github.com/amelia-coding/coding/blob/master/！补充题%2012.生成随机字符串.js)\
 [7. 实现一个 koa2](https://github.com/amelia-coding/coding/blob/master/！补充题%207.Nodejs/实现一个koa/like-koa2.js)\
 [15. parseQueryString](https://github.com/amelia-coding/coding/blob/master/！补充题%2015.解析url参数.js)\
 [22. 获取对象的链式属性](https://github.com/amelia-coding/coding/blob/master/！补充题%2022.获取对象的链式属性.js)
