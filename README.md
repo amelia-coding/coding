@@ -4,6 +4,8 @@
 
 ## 1. 补充题
 [1.生成6位验证码](https://github.com/amelia-coding/coding/blob/master/！补充题%201.生成6位验证码.js)\
+[2.实现arr[-1]的访问](https://github.com/amelia-coding/coding/blob/master/！补充题%202.实现arr[-1]的访问.js)\
+[3.根据权重随机返回一个人](https://github.com/amelia-coding/coding/blob/master/！补充题%203.根据权重随机返回一个人.js)\
 [7. 实现一个 koa2](https://github.com/amelia-coding/coding/blob/master/！补充题%207.Nodejs/实现一个koa/like-koa2.js)\
 [10.打印子节点](https://github.com/amelia-coding/coding/blob/master/！补充题%2010.打印子节点.js.js)\
 [11.二维数组的排列组合](https://github.com/amelia-coding/coding/blob/master/！补充题%2011.二维数组的排列组合.js)\
@@ -15,7 +17,18 @@
 [17. 给子节点添加父节点ID](https://github.com/amelia-coding/coding/blob/master/！补充题%2017.给子节点添加父节点ID.js)\
 [18.求数组中能两两相除的最长子序列](https://github.com/amelia-coding/coding/blob/master/！补充题%2018.求数组中能两两相除的最长子序列.js)\
 [19.实现数组的多种去重方法](https://github.com/amelia-coding/coding/blob/master/！补充题%2019.实现数组的多种去重方法.js)\
-[22. 获取对象的链式属性](https://github.com/amelia-coding/coding/blob/master/！补充题%2022.获取对象的链式属性.js)
+[20.和为K的子序列](https://github.com/amelia-coding/coding/blob/master/！补充题%2020.和为K的子序列.js)\
+[21.递增递减数组最大值](https://github.com/amelia-coding/coding/blob/master/！补充题%2021.递增递减数组最大值.js)\
+[22.获取对象的链式属性](https://github.com/amelia-coding/coding/blob/master/！补充题%2019.获取对象的链式属性.js)\
+[23.对象偏平化](https://github.com/amelia-coding/coding/blob/master/！补充题%20123.对象偏平化.js)\
+[24. MergeTopOf](https://github.com/amelia-coding/coding/blob/master/！补充题%2024.MergeTopOf.js)\
+[25. 二叉树中指定节点间的距离](https://github.com/amelia-coding/coding/blob/master/！补充题%2025.二叉树中指定节点间的距离.js)\
+[26. 生成随机数](https://github.com/amelia-coding/coding/blob/master/！补充题%2026.生成随机数.js)\
+[27. 模拟红绿灯](https://github.com/amelia-coding/coding/blob/master/！补充题%2027.模拟红绿灯.js)\
+[28. 使用原生js操作dom](https://github.com/amelia-coding/coding/blob/master/！补充题%2028.使用原生js操作dom.js)\
+[29. 按顺序渲染dom](https://github.com/amelia-coding/coding/blob/master/！补充题%2029.按顺序渲染dom.js)\
+[30. 实现高度是宽度的一半](https://github.com/amelia-coding/coding/blob/master/！补充题%2030.实现高度是宽度的一半.js)
+
 
 ## 2. 面试题
 
