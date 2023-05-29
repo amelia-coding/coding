@@ -6,7 +6,10 @@
 [1.生成6位验证码](https://github.com/amelia-coding/coding/blob/master/！补充题%201.生成6位验证码.js)\
 [2.实现arr[-1]的访问](https://github.com/amelia-coding/coding/blob/master/！补充题%202.实现arr[-1]的访问.js)\
 [3.根据权重随机返回一个人](https://github.com/amelia-coding/coding/blob/master/！补充题%203.根据权重随机返回一个人.js)\
-[7. 实现一个 koa2](https://github.com/amelia-coding/coding/blob/master/！补充题%207.Nodejs/实现一个koa/like-koa2.js)\
+[5.求一个区间内的X值](https://github.com/amelia-coding/coding/blob/master/！补充题%205.求一个区间内的X值.js)\
+[7. css三角](https://github.com/amelia-coding/coding/blob/master/！补充题%207.css三角.js)\
+[8.间隔3秒打印一次](https://github.com/amelia-coding/coding/blob/master/！补充题%208.间隔3秒打印一次.js)\
+[9.css扇形](https://github.com/amelia-coding/coding/blob/master/！补充题%209.css扇形.js)\
 [10.打印子节点](https://github.com/amelia-coding/coding/blob/master/！补充题%2010.打印子节点.js.js)\
 [11.二维数组的排列组合](https://github.com/amelia-coding/coding/blob/master/！补充题%2011.二维数组的排列组合.js)\
 [12.生成随机字符串](https://github.com/amelia-coding/coding/blob/master/！补充题%2012.生成随机字符串.js)\
