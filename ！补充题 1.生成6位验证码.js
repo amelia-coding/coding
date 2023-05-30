@@ -1,5 +1,6 @@
 /*
 生成6位验证码
+|0 代表取整
 */
 
 function getCode(num) {
