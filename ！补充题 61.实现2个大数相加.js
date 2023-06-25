@@ -1,3 +1,9 @@
+/**
+ * JS 在存放整数的时候是有一个安全范围的，一旦数字超过这个范围便会损失精度
+ * 所以，我们要用字符串来表示数据！
+ * @param {*} str1 
+ * @param {*} str2 
+ */
 function bigNumberSum(str1, str2) {
   let len = Math.max(str1.length, str2.length)
   //用0去补齐长度
