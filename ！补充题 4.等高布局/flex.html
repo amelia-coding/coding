@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>flex</title>
-    <style>
-      .box {
-        background-color: silver;
-      }
-      .left {
-        background-color: red;
-      }
-      .right {
-        background-color: slateblue;
-      }
 
-      .box {
-        display: flex;
-      }
-      .left,
-      .right {
-        /* 定义了子元素不伸缩 */
-        flex: 0 0 auto;
-        /* 伸缩 */
-        flex: 1;
-      }
-    </style>
-  </head>
+<head>
+  <title>flex</title>
+  <style>
+    .box {
+      background-color: silver;
+    }
 
-  <body>
-    <div class="box">
-      <div class="left">
-        <p>我是left</p>
-        123
-      </div>
-      <div class="right">
-        我是right
-      </div>
+    .left {
+      background-color: red;
+    }
+
+    .right {
+      background-color: slateblue;
+    }
+
+    .box {
+      display: flex;
+    }
+
+    .left,
+    .right {
+      /* 伸缩 */
+      flex: 1;
+      /**
+        flex属性的值可以是一个非负整数、一个长度单位或一个关键字。具体来说：
+
+        非负整数：表示该项目占据的相对空间大小，越大则占据的空间越多。例如，flex: 1表示该项目将尽可能地占据剩余的空间（按比例分配），并与其他伸缩项目平分容器的可用空间。
+        长度单位：表示固定的宽度或高度，以像素（px）、百分比（%）等形式指定。例如，flex: 0 0 100px表示该项目的宽度为100像素，且不允许伸缩。
+        关键字：表示特定的伸缩行为，如flex-grow、flex-shrink和flex-basis。其中，flex-grow表示可以伸缩的权重（默认为0），flex-shrink表示可以伸缩的权重（默认为1），flex-basis表示项目在主轴方向上的初始大小（默认为auto）。
+      **/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="left">
+      <p>我是left</p>
+      123
     </div>
-  </body>
+    <div class="right">我是right</div>
+  </div>
+</body>
+
 </html>

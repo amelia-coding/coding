@@ -1,5 +1,6 @@
 /**
 解决移动端border的1物理像素问题
+通过media查询设备像素比device-pixel-ratio，设置 transform: scale(0.5) 缩放
 **/
 @charset "utf-8";
 .border,
