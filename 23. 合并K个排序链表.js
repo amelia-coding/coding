@@ -30,7 +30,7 @@ var mergeKLists = function (lists) {
   if (len === 1) return lists[0];
   let left = 0,
     right = len;
-  let mid = len >>> 1;
+  let mid = len >>> 1; // 除以2
   let leftLists = lists.slice(left, mid);
   let rightLists = lists.slice(mid, right);
   return merge(mergeKLists(leftLists), mergeKLists(rightLists));

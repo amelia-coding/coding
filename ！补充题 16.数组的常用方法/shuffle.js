@@ -3,10 +3,13 @@
 */
 
 const shuffle = ([...arr]) => {
-  let m = arr.length;
+  let m = arr.length
   while (m) {
-    const i = Math.floor(Math.random() * m--);
-    [arr[m], arr[i]] = [arr[i], arr[m]];
+    const i = Math.floor(Math.random() * m--)
+    ;[arr[m], arr[i]] = [arr[i], arr[m]]
   }
-  return arr;
-};
+
+  return arr
+}
+
+shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
