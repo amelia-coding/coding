@@ -10,44 +10,46 @@
 
 */
 
-/*
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */
-var merge = function (nums1, m, nums2, n) {
-  let len1 = m - 1,
-    len2 = n - 1,
-    len = m + n - 1;
-  while (len2 >= 0) {
-    if (len1 >= 0) {
-      nums1[len--] = nums1[len1] >= nums2[len2] ? nums1[len1--] : nums2[len2--];
-    } else {
-      nums1[len--] = nums2[len2--];
-    }
-  }
-};
+const merge0 = (arr1, arr2) => {
+  return [...arr1, ...arr2].sort()
+}
 
-/**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */
-var merge = function (nums1, m, nums2, n) {
-  let len1 = m - 1,
-    len2 = n - 1,
-    len = m + n - 1;
-  while (len1 >= 0 && len2 >= 0) {
-    nums1[len--] = nums1[len1] >= nums2[len2] ? nums1[len1--] : nums2[len2--];
-  }
-  if (len2 >= 0) {
-    while (len >= 0) {
-      nums1[len--] = nums2[len2--];
+const merge = function (arr1, arr2) {
+  let result = []
+  let p1 = 0,
+    p2 = 0
+  while (p1 < arr1.length && p2 < arr2.length) {
+    if (arr1[p1] <= arr2[p2]) {
+      result.push(arr1[p1])
+      p1++
+    } else {
+      result.push(arr2[p2])
+      p2++
     }
   }
-  return nums1;
-};
+
+  result = result.concat(p1 < arr1.length ? arr1.slice(p1) : p2 < arr2.length ? arr2.slice(p2) : [])
+
+  return result
+}
+
+const merge2 = function (arr1, arr2) {
+  let result = []
+  let p1 = 0,
+    p2 = 0
+  while (arr1.length && arr2.length) {
+    if (arr1[0] <= arr2[0]) {
+      result.push(arr1[p1])
+      arr1.shift()
+    } else {
+      result.push(arr2[p2])
+      arr2.shift()
+    }
+  }
+
+  result = arr1.length ? result.concat(arr1) : result.concat(arr2)
+
+  return result
+}
+
+console.log(merge0([1, 2, 3], [1, 2, 4, 5]))
