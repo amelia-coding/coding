@@ -14,22 +14,22 @@
  * @return {string[]}
  */
 var permutation = function (s) {
-  let queue = s.split(""),
-    res = [];
-  dfs(queue, "", [], res);
-  res = [...new Set(res)];
-  return res;
-};
+  let queue = s.split(''), res = []
+  dfs(queue, '', res)
+  res = [...new Set(res)]
+  return res
+}
 
-function dfs(queue, curr, visited, res) {
-  visited += curr;
+function dfs(queue, visited, res) {
   if (queue.length === 0) {
-    res.push(visited);
-    return;
+    res.push(visited)
+    return
   }
   for (let i = 0; i < queue.length; i++) {
-    let curr = queue.shift();
-    dfs(queue, curr, visited, res);
-    queue.push(curr);
+    let curr = queue.shift()
+    dfs(queue, visited + curr, res)
+    queue.push(curr)
   }
 }
+
+console.log(permutation('abc'))
