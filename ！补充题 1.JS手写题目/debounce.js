@@ -5,79 +5,57 @@
 总之，就是要等你触发完事件 n 秒内不再触发事件，
 我才执行，真是任性呐!
 */
-function debounce(fn,delay,immediate) {
-  const timer;
+function debounce(fn, delay, immediate) {
+  let timer = null
   const bouned = function (...args) {
-    if (timer) clearTimeout(timer);
+    if (timer) clearTimeout(timer)
     if (immediate) {
       timer = setTimeout(() => {
-        timer = null;
-      }, delay);
-      if (!timer) result = fn.apply(this, args);
+        timer = null
+      }, delay)
+      if (!timer) result = fn.apply(this, args)
     } else {
       timer = setTimeout(() => {
-        fn.apply(this, args);
-      }, delay);
+        fn.apply(this, args)
+      }, delay)
     }
-    return result;
-  };
+    return result
+  }
 
   //立即执行版本可以取消
-  bouned.cancel = function() {
+  bouned.cancel = function () {
     clearTimeout(timer)
     timer = null
   }
   return bouned
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function debounce(fn, delay, immediate) {
-  let timer, result;
+  let timer, result
   // 这里不能使用箭头函数，不然 this 依然会指向 Windows对象
   // 使用rest参数，获取函数的多余参数
-  const debounced = function(...args) {
-    if (timer) clearTimeout(timer);
+  const debounced = function (...args) {
+    if (timer) clearTimeout(timer)
     if (immediate) {
-      const callNow = !timer;
+      const callNow = !timer
       timer = setTimeout(() => {
-        timer = null;
-      }, delay);
-      if (callNow) result = fn.apply(this, args);
+        timer = null
+      }, delay)
+      if (callNow) result = fn.apply(this, args)
     } else {
       timer = setTimeout(() => {
-        fn.apply(this, args);
-      }, delay);
+        fn.apply(this, args)
+      }, delay)
     }
-    return result;
-  };
+    return result
+  }
 
   debounced.cancel = () => {
-    clearTimeout(timer);
-    timer = null;
-  };
+    clearTimeout(timer)
+    timer = null
+  }
 
-  return debounced;
+  return debounced
 }
+
+

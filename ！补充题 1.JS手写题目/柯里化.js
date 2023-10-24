@@ -16,3 +16,6 @@ function add(x, y, z) {
 
 const ff = curing(add)
 console.log(ff(1)(2)(5))
+
+
+
