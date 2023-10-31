@@ -22,27 +22,19 @@ book[i]中只包含小写字母
 get函数的调用次数不会超过100000
 */
 
-/**
- * reduce+对象map
- * @param {string[]} book
- */
-var WordsFrequency = function (book) {
-  this.book = book.reduce((pre, item) => {
-    pre[item] = !pre[item] ? 1 : pre[item] + 1;
-    return pre;
-  }, {});
-};
+class WordsFrequency {
+  constructor(book) {
+    this.book = book.reduce((pre, item) => {
+      pre[item] = !pre[item] ? 1 : pre[item] + 1
+      return pre
+    }, {})
+  }
 
-/**
- * @param {string} word
- * @return {number}
- */
-WordsFrequency.prototype.get = function (word) {
-  return this.book[word] || 0;
-};
+  get(word) {
+    return this.book[word] || 0
+  }
+}
 
-/**
- * Your WordsFrequency object will be instantiated and called as such:
- * var obj = new WordsFrequency(book)
- * var param_1 = obj.get(word)
- */
+const wordsFrequency = new WordsFrequency(['i', 'have', 'an', 'apple', 'he', 'have', 'a', 'pen'])
+
+console.log(wordsFrequency.get('have'))
