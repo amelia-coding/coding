@@ -1,3 +1,9 @@
+/**
+ * 使用proxy生成一个代理对象
+ * Reflect来操作对象
+ * @param {*} els
+ * @returns
+ */
 const negativeArray = (els) => {
   return new Proxy(els, {
     get: (target, propKey, receiver) => {
@@ -8,4 +14,4 @@ const negativeArray = (els) => {
 }
 
 const arr = negativeArray(['京', '程', '一', '灯'])
-console.log(arr[-1]);
+console.log(arr[-1])
