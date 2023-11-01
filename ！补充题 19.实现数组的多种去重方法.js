@@ -1,25 +1,57 @@
-function unique(arr) {
-  arr = arr.sort((a, b) => a - b);
+// 1.数组去重
+
+/**
+ * reduce
+ * @param {*} arrArgs
+ * @returns
+ */
+function unique1(arrArgs) {
+  const arr = arrArgs.sort((a, b) => a - b)
   return arr.reduce((a, b, index) => {
-    if (b !== arr[index - 1] || index === 0) {
-      a.push(b);
-    }
-    return a;
-  }, []);
+    if (b !== arr[index - 1] || index === 0) a.push(b)
+    return a
+  }, [])
 }
 
-function unique(arr) {
-  return [...new Set(arr)];
+/**
+ * Set对象
+ * @param {*} arr
+ * @returns
+ */
+function unique2(arr) {
+  return [...new Set(arr)]
 }
 
-function unique(arr) {
-  let newArr = [];
+/**
+ * includes
+ * @param {*} arr
+ * @returns
+ */
+function unique3(arr) {
+  let newArr = []
   for (let i = 0; i < arr.length; i++) {
-    if (newArr.indexOf(arr[i]) < 0) {
-      newArr.push(arr[i]);
+    if (!newArr.includes(arr[i])) {
+      newArr.push(arr[i])
     }
   }
-  return newArr;
+  return newArr
 }
 
-console.log(unique([1, 2, 3, 3, 4, 5, 6, 5, 4]));
+// console.log(unique3([1, 2, 3, 3, 4, 5, 6, 5, 4]))
+
+/**
+ * 2. 数组对象去重
+ * [{ key: 1}, {key: 2}, {key: 1}]
+ */
+
+const uniqueO = (arrArgs) => {
+  const arr = arrArgs.sort((a, b) => a.key - b.key)
+  return arr.reduce((tar, cur, index) => {
+    if (index === 0 || cur.key !== arr[index - 1].key) {
+      tar.push(cur)
+    }
+    return tar
+  }, [])
+}
+
+console.log(uniqueO([{ key: 1 }, { key: 2 }, { key: 1 }]))
