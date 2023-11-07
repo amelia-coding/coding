@@ -25,7 +25,7 @@ get函数的调用次数不会超过100000
 class WordsFrequency {
   constructor(book) {
     this.book = book.reduce((pre, item) => {
-      pre[item] = !pre[item] ? 1 : pre[item] + 1
+      pre[item] = pre[item] ? pre[item] + 1 : 1
       return pre
     }, {})
   }
