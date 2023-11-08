@@ -65,3 +65,15 @@ class Events {
 }
 
 module.exports = Events
+
+const event = new Events()
+
+event.on('click', (...args) => {
+  console.log('11', args)
+})
+
+event.on('click', (...args) => {
+  console.log('22', args)
+})
+
+event.emit('click', 1, 2)
