@@ -17,9 +17,9 @@ console.log(
   [...arr1, ...arr2]
   .sort(
     (v2, v1) => (
-      v2.codePointAt(0) - v1.codePointAt(0) ||
-      v1.length - v2.length ||
-      v2.codePointAt(1) - v1.codePointAt(1)
+      v2.codePointAt(0) - v1.codePointAt(0) 
+      || v1.length - v2.length 
+      || v2.codePointAt(1) - v1.codePointAt(1)
     )
   )
 );
