@@ -8,11 +8,10 @@
 // - prependListener
 
 // 实现
-
 //1. Events模块只有一个EventEmitter类，首先定义类的基本结构
 class Events {
   constructor() {
-    this.events = {};
+    this.events = {}
   }
   /**
    * 事件监听
@@ -21,9 +20,9 @@ class Events {
    */
   on(type, listener) {
     if (this.events[type]) {
-      this.events[type].push(listener);
+      this.events[type].push(listener)
     } else {
-      this.events[type] = [listener];
+      this.events[type] = [listener]
     }
   }
 
@@ -34,10 +33,10 @@ class Events {
    */
   once(type, listener) {
     const wraper = (...rest) => {
-      listener.apply(this, rest);
-      this.removeListener(type, wraper);
-    };
-    this.on(type, wrapper);
+      listener.call(this, ...rest)
+      this.removeListener(type, wraper)
+    }
+    this.on(type, wrapper)
   }
 
   /**
@@ -48,8 +47,8 @@ class Events {
   emit(type, ...args) {
     if (this.events[type]) {
       this.events[type].forEach((listener) => {
-        listener.call(this, ...args);
-      });
+        listener.call(this, ...args)
+      })
     }
   }
 
@@ -60,9 +59,9 @@ class Events {
    */
   removeListener(type, listener) {
     if (this.events[type]) {
-      this.events[type] = this.events[type].filter((l) => l !== listener);
+      this.events[type] = this.events[type].filter((l) => l !== listener)
     }
   }
 }
 
-module.exports = Events;
+module.exports = Events
