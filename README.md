@@ -114,3 +114,11 @@
 # 参考
 
 https://mp.weixin.qq.com/s/sT6_sHuptgwg9A4KxQfGSg
+
+https://juejin.cn/post/6947842412102287373 字节跳动算法
+
+https://codetop.cc/home
+
+https://www.yuque.com/dashboard/notes
+
+https://github.com/scofieldfan/turtle-rock 手写算法 

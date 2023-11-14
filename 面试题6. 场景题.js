@@ -85,3 +85,39 @@ const array = [{ a: { b: [1] } }] // path: '[0].a.b[0]'
 console.log(getValue(object, 'a[0].b.c', 0)) // 输出3
 // console.log(getValue(array, '[0].a.b[0]', 12)) // 输出 1
 // console.log(getValue(array, '[0].a.b[0].c', 12)) // 输出 12
+
+/**
+ 
+实现一个setter
+setter(obj,'a.b.c.d',3)
+console.log(obj.a.b.c.d) - 3
+ */
+
+let setter = function (content, key, value) {
+  const keys = key.split('.')
+  let len = keys.length
+  var obj = content[keys[0]]
+  for (let i = 1; i < len - 1; i++) {
+    if (typeof obj[keys[i]] === 'object') {
+      obj = obj[keys[i]]
+    }
+  }
+  obj[keys[len - 1]] = value
+}
+
+let obj = {
+  a: {
+    b: {
+      c: {
+        d: 1,
+      },
+      bx: {
+        y: 1,
+      },
+    },
+  },
+}
+setter(obj, 'a.b.c.d', 3)
+console.log(obj.a.b.c)
+setter(obj, 'a.b.bx', 4)
+console.log(obj.a.b)
