@@ -31,7 +31,7 @@ var permuteUnique = function (nums) {
 
 function dfs(nums, solution, res, visted) {
   if (solution.length === nums.length) {
-    res.push(solution.slice(0));
+    res.push([...solution]);
     return;
   }
   for (let i = 0; i < nums.length; i++) {
@@ -43,3 +43,5 @@ function dfs(nums, solution, res, visted) {
     visted[i] = false;
   }
 }
+
+console.log(permuteUnique([1,1,2]))

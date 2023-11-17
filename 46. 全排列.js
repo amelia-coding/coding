@@ -22,20 +22,20 @@
  * @return {number[][]}
  */
 var permute = function (nums) {
-  let res = [];
-  dfs(nums, [], res);
-  return res;
-};
+  let res = []
+  dfs(nums, [], res)
+  return res
+}
 
 function dfs(nums, solution, res) {
   if (solution.length === nums.length) {
-    res.push([...solution]);
-    return;
+    res.push([...solution]) //必须进行数组的拷贝，solution的值是变化的，不会保留当时的数组
+    return
   }
   for (let i = 0; i < nums.length; i++) {
-    if (solution.includes(nums[i])) continue;
-    solution.push(nums[i]);
-    dfs(nums, solution, res);
-    solution.pop();
+    if (solution.includes(nums[i])) continue
+    solution.push(nums[i])
+    dfs(nums, solution, res)
+    solution.pop()
   }
 }
