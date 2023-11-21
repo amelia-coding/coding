@@ -1,3 +1,7 @@
+/**
+ * 实现一个模版字符串
+ */
+
 let templ = `name is {obj.a}
 age is { obj.b.c}
 address is {obj.c.d}
@@ -17,7 +21,7 @@ function render(templ, data) {
     let keys = group.split('.')
     let temp = data
     for (let key of keys) {
-      temp = temp[key.trim()] 
+      temp = temp[key.trim()]
       if (temp === undefined) break
     }
     return JSON.stringify(temp !== undefined ? temp : group)

@@ -18,7 +18,7 @@
     </style>
   </head>
   <body>
-    <div id="app" class="test1 dd" style="background: yellow;">内容区域</div>
+    <div id="app" class="test1 dd" style="background: yellow">内容区域</div>
   </body>
 </html>
 <script>
@@ -33,27 +33,27 @@
       this.el.innerHTML = content
     }
     hasClass(className) {
-      return Array.from(this.el.classList).filter((item) => item === className).length >= 1
+      return !!Array.from(this.el.classList).find((item) => item === className)
     }
-    removeClass(className){
-       //el.classList返回的是类数组对象
+    removeClass(className) {
+      //el.classList返回的是类数组对象
       this.el.classList.remove(className)
     }
     addClass(className) {
       this.el.classList.add(className)
-      return this//支持链式
+      return this //支持链式
     }
-    getStyle(...attr){
+    getStyle(...attr) {
       const style = window.getComputedStyle(this.el)
-      return attr.map(item=>style[item])
+      return attr.map((item) => style[item])
     }
-    setStyle(obj){
-      for(let key in obj) {
-        if(obj.hasOwnProperty(key)){
+    setStyle(obj) {
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
           this.el.style[key] = obj[key]
         }
       }
-      return this//支持链式
+      return this //支持链式
     }
   }
   const handler = new Handler('app')
