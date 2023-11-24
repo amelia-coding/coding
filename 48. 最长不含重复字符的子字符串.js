@@ -27,21 +27,25 @@
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function (s) {
-  const length = s.length;
-  const map = new Map();
-  let i = 0,
-    j = 0;
-  let ans = 0;
-  while (i < length && j < length) {
+var lengthOfLongestSubstring = function (str) {
+  const map = new Map()
+  let right = 0,
+    left = 0
+  let maxLen = 0
+  while (right < str.length) {
     // 容易理解：检查s[j]是否出现过，并且s[j]重复的字符是否在当前的滑动窗口中
-    if (map.has(s[j]) && map.get(s[j]) >= i) {
-      //使用has判断不用get，因为0也会被认为false
-      i = map.get(s[j]) + 1;
+    // Map的方法: set、get、delete、clear、has、values、entries
+    if (map.has(str[right]) && map.get(str[right]) >= left) {
+      //注意更新left要使用map.get(str[right]) + 1
+      left = map.get(str[right]) + 1
     }
-    ans = Math.max(j - i + 1, ans);
-    map.set(s[j], j);
-    ++j;
+    maxLen = Math.max(maxLen, right - left + 1)
+    map.set(str[right], right)
+    right++
   }
-  return ans;
-};
+
+  return maxLen
+}
+
+console.log(lengthOfLongestSubstring('aab'))
+console.log(lengthOfLongestSubstring('abcda'))
