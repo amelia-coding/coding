@@ -37,6 +37,8 @@
 
 [字节一面：给定一个二叉树, 找到该树中两个指定节点间的最短距离](https://github.com/sisterAn/JavaScript-Algorithms/issues/82)
 
+[面经](https://github.com/amelia-coding/coding/blob/master/面经.md)
+
 ## 3. Leetcode
 
 ### 二叉树
@@ -106,19 +108,20 @@
 
 ### Leetcode总结
 
-- `双指针` 同向指针 \ 双向指针 \ 指针保存的是元素的索引位置
-- `矩阵深搜系列` 矩阵中的路径 \ 岛屿数量 \ 机器人的运动范围
-- `子数组` 前缀和\滑动窗口\动态规划
+`双指针` 同向指针 \ 双向指针 \ 指针保存的是元素的索引位置
 
+`矩阵深搜系列` 矩阵中的路径 \ 岛屿数量 \ 机器人的运动范围
 
-# 参考
+`子数组` 前缀和\滑动窗口\动态规划
 
-labuladong https://mp.weixin.qq.com/s/sT6_sHuptgwg9A4KxQfGSg
+### 其他
 
-codeTop https://codetop.cc/home
+[labuladong](https://mp.weixin.qq.com/s/sT6_sHuptgwg9A4KxQfGSg)
 
-手写算法 https://github.com/scofieldfan/turtle-rock 
+[codeTop](https://codetop.cc/home)
 
-牛客网 https://www.nowcoder.com/exam/oj?page=1&pageSize=100&search=&tab=%E7%AE%97%E6%B3%95%E7%AF%87&topicId=117
+[手写算法](https://github.com/scofieldfan/turtle-rock ])
 
-字节跳动算法 https://juejin.cn/post/6947842412102287373 
+[牛客网](https://www.nowcoder.com/exam/oj?page=1&pageSize=100&search=&tab=%E7%AE%97%E6%B3%95%E7%AF%87&topicId=117)
+
+[字节跳动算法](https://juejin.cn/post/6947842412102287373)
