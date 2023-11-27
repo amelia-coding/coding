@@ -2,14 +2,11 @@
  * 
 - 1.如何设计一个通过组件曝光的sdk（计算路由跳转层级、停留时间等）
 // 曝光实现 https://blog.csdn.net/Ed7zgeE9X/article/details/131928782
-
 - 2. 手写给个xiaotuofeng-mingming-shezhi改成驼峰式xiaotuofengMingmingShezhi
 - 3. 秒数转换为（时分秒hh:mm:ss）格式、不能使用js API
 - 4. Semantic Versioning 是一个前端通用的版本规范。格式为“{MAJOR}.{MINOR}.{PATCH}-{alpha|beta|rc}.{number}”，要求实现 compare(a, b) 方法，比较 a, b 两个版本大小
 - 5. 实现 getValue 函数来获取path对应的值, 如 const object = { 'a': [{ 'b': { 'c': 3 } }] } ； console.log(getValue(object, 'a[0].b.c', 0));  // 输出3
 */
-
-
 
 function camelize(str) {
   return str.replace(/[-\s]+(.)?/g, function (match, c) {
