@@ -174,7 +174,7 @@
 
 [codeTop](https://codetop.cc/home)
 
-[手写算法](https://github.com/scofieldfan/turtle-rock ])
+[手写算法](https://github.com/scofieldfan/turtle-rock)
 
 [牛客网](https://www.nowcoder.com/exam/oj?page=1&pageSize=100&search=&tab=%E7%AE%97%E6%B3%95%E7%AF%87&topicId=117)
 
