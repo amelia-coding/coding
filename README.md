@@ -3,6 +3,7 @@
 该项目包含了前端的一些常用的 `JS`、`CSS`、`JS 库`、以及`leetcode算法`、`面试题`、`手写题`的代码实现
 
 ## 1. 补充题
+
 [1.生成6位验证码](https://github.com/amelia-coding/coding/blob/master/！补充题%201.生成6位验证码.js)\
 [2.实现arr[-1]的访问](https://github.com/amelia-coding/coding/blob/master/！补充题%202.实现arr[-1]的访问.js)\
 [3.根据权重随机返回一个人](https://github.com/amelia-coding/coding/blob/master/！补充题%203.根据权重随机返回一个人.js)\
