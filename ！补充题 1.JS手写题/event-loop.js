@@ -1,3 +1,4 @@
+//题目一
 async function async1() {
   console.log('async1 start')
   await async2()
@@ -38,7 +39,7 @@ promise2
 setTimeout
  */
 
-//解答
+// 解答思路
 async function async1() {
   console.log('async1 start') // step 4: 直接打印同步代码 async1 start
   await async2() // step 5: 遇见 await，首先执行其右侧逻辑，并在这里中断 async1 函数
@@ -64,3 +65,30 @@ new Promise(function (resolve) {
 console.log('script end') // step 10: 直接打印同步代码 script end，并回到 async1 函数中继续执行
 
 // 基于微任务的技术有 MutationObserver、Promise 以及以 Promise 为基础开发出来的很多其他的技术，本题中resolve()、await async2()都是微任务。
+
+/**
+ * 题目二
+ */
+etTimeout(() => {
+  console.log(0);
+}, 0);
+
+new Promise(res => setTimeout(res, 0)).then(() => {
+  console.log(1);
+  setTimeout(() => {
+    console.log(2);
+  });
+  new Promise(res => res()).then(() => {
+    console.log(3);
+  });
+});
+
+setTimeout(() => {
+  console.log(4);
+});
+
+new Promise(res => res()).then(() => {
+  console.log(5);
+});
+
+// 解答：5-0-1-3-4-2

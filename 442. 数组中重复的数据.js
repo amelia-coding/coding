@@ -20,13 +20,10 @@
  */
 var findDuplicates = function (nums) {
   nums.sort((a, b) => a - b)
-  //只适用元素出现2次
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] !== nums[i + 1]) {
+    if (nums[i] === nums[i + 1]) {
       nums.splice(i, 1)
-      i--
-    } else {
-      nums.splice(i, 1)
+      i--//此时数组长度减1，所以指针往前一步
     }
   }
   return nums
@@ -38,6 +35,8 @@ var findDuplicates = function (nums) {
  */
 var findDuplicates = function (nums) {
   nums.sort((x, y) => x - y)
-  nums = nums.filter((v, i) => v == nums[i - 1])
+  nums = nums.filter((v, i) => v !== nums[i - 1])
   return nums
 }
+
+console.log(findDuplicates([1,1,1,3,3,4]))

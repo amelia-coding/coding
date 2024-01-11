@@ -3,9 +3,9 @@
 */
 
 function camelize (str) {
-  return str.replace(/[-\s]+(.)?/g, function (match, group) { 
-    console.log(c)
-    return c ? c.toUpperCase() : ''; });
+  return str.replace(/([a-z]+)/g, function (match, group) { 
+    return group ? group.charAt(0).toUpperCase() + match.slice(1) : ''
+   })
 }
 
-console.log(camelize('hello-wo-rd'))
+console.log(camelize('hello world'))
