@@ -28,7 +28,8 @@ let merge = (intervals) => {
   let arr = [intervals[0]]
   for (let i = 1; i < len; i++) {
     const arrLen = arr.length
-    if (intervals[i][0] <= arr[arrLen - 1][1]) {
+    
+    if (intervals[i][0] <= arr[arrLen - 1][1]) {//如果当前选择区间 < 结果中最后一个区间的end，则有重叠
       arr[arrLen - 1][1] = Math.max(intervals[i][1], arr[arrLen - 1][1])
     } else {
       arr.push(intervals[i])

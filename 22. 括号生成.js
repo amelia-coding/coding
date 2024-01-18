@@ -22,6 +22,7 @@ var generateParenthesis = function (n) {
   let res = [];
   //  cur :当前字符  left：当前字符左括号 right:当前字符右括号
   const help = (cur, left, right) => {
+   
     if (cur.length === 2 * n) {
       res.push(cur);
       return;
@@ -29,6 +30,7 @@ var generateParenthesis = function (n) {
     if (left < n) {
       help(cur + "(", left + 1, right);
     }
+
     if (right < left) {
       help(cur + ")", left, right + 1);
     }
@@ -37,18 +39,23 @@ var generateParenthesis = function (n) {
   return res;
 };
 
+generateParenthesis(2)
+
 var generateParenthesis = function (n) {
   let res = [];
   const help = (solution, left, right) => {
     if (left < 0 || right < 0) return;
     if (left > right) return;
+    console.log(solution)
     if (left === 0 && right === 0) {
       res.push(solution.join(""));
       return;
     }
+
     solution.push("(");
     help(solution, left - 1, right);
     solution.pop();
+
 
     solution.push(")");
     help(solution, left, right - 1);
@@ -57,6 +64,9 @@ var generateParenthesis = function (n) {
   help([], n, n);
   return res;
 };
+
+
+
 
 /*
 框架
