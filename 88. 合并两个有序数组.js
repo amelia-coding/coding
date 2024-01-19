@@ -14,23 +14,17 @@ const merge0 = (arr1, arr2) => {
   return [...arr1, ...arr2].sort()
 }
 
-const merge = function (arr1, arr2) {
-  let result = []
-  let p1 = 0,
-    p2 = 0
-  while (p1 < arr1.length && p2 < arr2.length) {
-    if (arr1[p1] <= arr2[p2]) {
-      result.push(arr1[p1])
-      p1++
+const merge = (nums1, m, nums2, n) => {
+  let len1 = m - 1,
+  len2 = n - 1,
+  len = m + n - 1
+  while(len2 >= 0) {
+    if(len1 >= 0) {
+        nums1[len--] = nums1[len1] >= nums2[len2] ? nums1[len1--]: nums2[len2--]
     } else {
-      result.push(arr2[p2])
-      p2++
-    }
-  }
-
-  result = result.concat(p1 < arr1.length ? arr1.slice(p1) : p2 < arr2.length ? arr2.slice(p2) : [])
-
-  return result
+        nums1[len--] = nums2[len2--]
+    }  
+}
 }
 
 const merge2 = function (arr1, arr2) {
@@ -52,4 +46,4 @@ const merge2 = function (arr1, arr2) {
   return result
 }
 
-console.log(merge0([1, 2, 3], [1, 2, 4, 5]))
+console.log(merge2([1,2,3], [2,5,6]))
