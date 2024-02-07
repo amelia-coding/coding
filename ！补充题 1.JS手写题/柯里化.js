@@ -1,8 +1,7 @@
 const curing = (fn, pre = []) => {
-  const argsLen = fn.length
   return function (...args) {
     pre = pre.concat(args)
-    if (pre.length === argsLen) {
+    if (pre.length ===  fn.length) {
       return fn.call(this, ...pre)
     } else {
       return curing(fn, pre)

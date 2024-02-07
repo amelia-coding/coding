@@ -101,3 +101,104 @@ controller.addTask(successTask(5))
 // 2 （第一个成功的异步任务后完成）
 // 6 （第三个成功的异步任务后完成）
 //10 （第五个成功的异步任务最后完成）
+
+
+function scheduler(max) {
+  // ------你的代码
+
+  const reqList = []
+
+  return function(req) {
+
+  }
+ 
+}
+
+const addRequest = scheduler(2);
+
+const request1 = () => {
+  return new Promise((rs) => {
+    setTimeout(() => {
+      rs(1)
+    }, 500)
+  })
+}
+
+const request2 = () => {
+  return new Promise((rs) => {
+    setTimeout(() => {
+      rs(2)
+    }, 800)
+  })
+}
+
+const request3 = () => {
+  return new Promise((rs) => {
+    setTimeout(() => {
+      rs(3)
+    }, 1000)
+  })
+}
+
+const request4 = () => {
+  return new Promise((rs) => {
+    setTimeout(() => {
+      rs(4)
+    }, 1200)
+  })
+}
+
+addRequest(request1).then((res) => {
+  console.log(res);
+})
+addRequest(request2).then((res) => {
+  console.log(res);
+});
+addRequest(request3).then((res) => {
+  console.log(res);
+});
+addRequest(request4).then((res) => {
+  console.log(res);
+});
+
+//模拟接口请求
+function getData(src) {
+  return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      resolve(src)
+    }, 1000);
+  })
+}
+
+/*异步并发限制*/
+function limitRequest(limit) {
+  this.que = []
+  this.limit = limit
+  this.count = 0
+  //添加任务
+  this.push = function(task) {
+    this.que.push(task)
+    this.run()
+  }
+  //执行任务
+  this.run = function() {
+    //1.如果队列非空,并且当前正在运行个数<limit
+    if(this.que.length && this.count<this.limit) {
+      let task = this.que.shift()
+      this.count++
+      task.fn(task.src).then(msg=>{
+        console.log(msg)
+        this.count--
+        this.run()
+      })
+    }
+  }
+}
+
+
+//测试使用
+let p = new limitRequest(2)//一次性最多执行2个任务
+p.push({fn:getData,src:1})
+p.push({fn:getData,src:1})
+p.push({fn:getData,src:1})
+p.push({fn:getData,src:1})
