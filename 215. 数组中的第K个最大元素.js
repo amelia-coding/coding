@@ -108,34 +108,3 @@ var quick = function (array, left, right) {
   return array
 }
 
-const prilot = (arr, left, right) => {
-  const mid = ((left + right) / 2) | 0
-  let i = left,
-    j = right
-  while (i <= j) {
-    while (arr[i] < arr[mid]) i++
-    while (arr[j] > arr[mid]) j--
-    if (i < j) {
-      ;[arr[i], arr[j]] = [arr[j], arr[i]]
-      i++
-      j--
-    }
-  }
-
-  return i
-}
-
-const quickSort = (arr, left, right) => {
-  const index = prilot(arr, left, right)
-  if (left < index) {
-    quickSort(arr, left, index)
-  }
-
-  if (index < right) {
-    quickSort(arr, index, right)
-  }
-}
-
-const arr = [7, 9, 3, 5, 6, 2]
-quickSort(arr, 0, arr.length - 1)
-console.log(arr)

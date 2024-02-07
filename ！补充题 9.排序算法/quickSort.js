@@ -10,6 +10,16 @@
 (3)递归地对两个序列进行快速排序，直到序列为空或者只有一个元素。
  */
 
+
+//简单
+const quickSort = array => {
+	if (array.length < 2) return array
+	const priot = array.pop()
+	const left = array.filter(num => num < priot) //left, right可以用reduce实现
+	const right = array.filter(num => num >= priot)
+	return [...quickSort(left), priot, ...quickSort(right)]
+}
+
 //1.分割操作
 const partition = function (array, left, right) {
   var pivot = array[Math.floor((right + left) / 2)],
@@ -42,44 +52,8 @@ const quick = function (array, left, right) {
       quick(array, index, right) //将index塞进去，说明index不代表一趟快排之后正确的位置
     }
   }
+
   return array
 }
 
-/**
- * 面试版本
- */
-class ArrayList {
-  constructor() {
-    this.arr = []
-  }
-  insert(...args) {
-    this.arr = [...this.arr, ...args]
-  }
-  quickSort() {
-    quick(this.arr, 0, this.arr.length - 1)
-    return this.arr
-  }
-}
-
-var arr = new ArrayList()
-arr.insert(10, 4, 5, 2, 7, 8, 6, 10)
-console.log(arr.quickSort())
-
-/**
- * 其他方案
- * @param {} arr
- */
-function quickSort(arr) {
-  if (arr.length === 0) return []
-  var pivot = arr[0]
-  var lesser = []
-  var greater = []
-  for (var i = 1; i < arr.length; i++) {
-    if (arr[i] < pivot) {
-      lesser.push(arr[i])
-    } else {
-      greater.push(arr[i])
-    }
-  }
-  return quickSort(lesser).concat(pivot, quickSort(greater))
-}
+quick([7,8,3,4,5,10], 0, 5)

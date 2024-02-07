@@ -105,13 +105,6 @@ controller.addTask(successTask(5))
 
 function scheduler(max) {
   // ------你的代码
-
-  const reqList = []
-
-  return function(req) {
-
-  }
- 
 }
 
 const addRequest = scheduler(2);
