@@ -16,7 +16,6 @@
 
  */
 
-
 //接下来，我们来看看如何用js实现一个简单的异步并发任务控制器。首先，我们需要定义一个类来表示控制器对象，并在构造函数中初始化以下三个属性：
 //`maxConcurrent`：最大并发数，也就是同时进行的异步任务数量。
 //`currentConcurrent`：当前并发数，也就是正在进行中或者已经完成但还未从队列中移除的异步任务数量。
@@ -32,6 +31,12 @@ class AsyncTaskController {
     this.currentConcurrent = 0
     // 初始化任务队列
     this.taskQueue = []
+    this.currtIndex = 0
+    this._result = []
+  }
+
+  get result() {
+    return this._result
   }
 
   // 添加一个异步任务到队列中，接受一个返回promise的函数作为参数
@@ -49,15 +54,19 @@ class AsyncTaskController {
       const task = this.taskQueue.shift()
       // 增加当前并发数
       this.currentConcurrent++
+      const currtIndex = this.currtIndex
+      this.currtIndex++
       // 执行任务函数，并处理其返回的promise对象
       task()
         .then((result) => {
+          console.error('success', result)
           // 如果成功，打印结果（或者做其他操作）
-          console.log(result)
+          this._result[currtIndex] = result
         })
         .catch((error) => {
           // 如果失败，打印错误（或者做其他操作）
-          console.error(error)
+          console.error('error', error)
+          this._result[currtIndex] = error
         })
         .finally(() => {
           // 不管成功还是失败，都要减少当前并发数，并执行下一个任务（递归调用）
@@ -68,17 +77,13 @@ class AsyncTaskController {
   }
 }
 
-// 测试代码
-
 // 创建一个异步任务控制器实例，最大并发数为2
 const controller = new AsyncTaskController(2)
 
-// 定义一些返回promise的函数作为模拟的异步任务
-
-// 模拟成功的异步任务，接受一个id作为参数，返回一个延迟1秒后resolve的promise对象，值为id * 2
+// 模拟成功的异步任务，接受一个id作为参数，返回一个延迟1秒后resolve的promise对象，值为id * 1
 const successTask = (id) => () =>
   new Promise((resolve) => {
-    setTimeout(() => resolve(id * 2), 1000)
+    setTimeout(() => resolve(id * 1), 1000)
   })
 
 // 模拟失败的异步任务，接受一个id作为参数，返回一个延迟1秒后reject的promise对象，值为id * -1
@@ -95,103 +100,6 @@ controller.addTask(successTask(3))
 controller.addTask(failTask(4))
 controller.addTask(successTask(5))
 
-// 预期输出：
-// -1 （第二个失败的异步任务先完成）
-// -4 （第四个失败的异步任务后完成）
-// 2 （第一个成功的异步任务后完成）
-// 6 （第三个成功的异步任务后完成）
-//10 （第五个成功的异步任务最后完成）
-
-
-function scheduler(max) {
-  // ------你的代码
-}
-
-const addRequest = scheduler(2);
-
-const request1 = () => {
-  return new Promise((rs) => {
-    setTimeout(() => {
-      rs(1)
-    }, 500)
-  })
-}
-
-const request2 = () => {
-  return new Promise((rs) => {
-    setTimeout(() => {
-      rs(2)
-    }, 800)
-  })
-}
-
-const request3 = () => {
-  return new Promise((rs) => {
-    setTimeout(() => {
-      rs(3)
-    }, 1000)
-  })
-}
-
-const request4 = () => {
-  return new Promise((rs) => {
-    setTimeout(() => {
-      rs(4)
-    }, 1200)
-  })
-}
-
-addRequest(request1).then((res) => {
-  console.log(res);
-})
-addRequest(request2).then((res) => {
-  console.log(res);
-});
-addRequest(request3).then((res) => {
-  console.log(res);
-});
-addRequest(request4).then((res) => {
-  console.log(res);
-});
-
-//模拟接口请求
-function getData(src) {
-  return new Promise((resolve,reject)=>{
-    setTimeout(() => {
-      resolve(src)
-    }, 1000);
-  })
-}
-
-/*异步并发限制*/
-function limitRequest(limit) {
-  this.que = []
-  this.limit = limit
-  this.count = 0
-  //添加任务
-  this.push = function(task) {
-    this.que.push(task)
-    this.run()
-  }
-  //执行任务
-  this.run = function() {
-    //1.如果队列非空,并且当前正在运行个数<limit
-    if(this.que.length && this.count<this.limit) {
-      let task = this.que.shift()
-      this.count++
-      task.fn(task.src).then(msg=>{
-        console.log(msg)
-        this.count--
-        this.run()
-      })
-    }
-  }
-}
-
-
-//测试使用
-let p = new limitRequest(2)//一次性最多执行2个任务
-p.push({fn:getData,src:1})
-p.push({fn:getData,src:1})
-p.push({fn:getData,src:1})
-p.push({fn:getData,src:1})
+setTimeout(() => {
+  console.log(controller.result)
+}, 5000)
