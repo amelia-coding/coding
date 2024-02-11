@@ -25,6 +25,7 @@
  */
 var productExceptSelf = function (nums) {
   let length = nums.length
+  //当前元素i的乘积 = 前缀之积L * 后缀之积R
   //L[i]代表i元素右边元素，即0～i-1的乘积
   let L = new Array(length).fill(0)
   let R = new Array(length).fill(0)
