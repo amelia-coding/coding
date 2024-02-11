@@ -10,20 +10,19 @@
 (3)递归地对两个序列进行快速排序，直到序列为空或者只有一个元素。
  */
 
-
 //简单
-const quickSort = array => {
-	if (array.length < 2) return array
-	const priot = array.pop()
-	const left = array.filter(num => num < priot) //left, right可以用reduce实现
-	const right = array.filter(num => num >= priot)
-	return [...quickSort(left), priot, ...quickSort(right)]
+const quickSort = (array) => {
+  if (array.length < 2) return array
+  const priot = array.pop()
+  const left = array.filter((num) => num < priot) //left, right可以用reduce实现
+  const right = array.filter((num) => num >= priot)
+  return [...quickSort(left), priot, ...quickSort(right)]
 }
 
 //1.分割操作
 const partition = function (array, left, right) {
-  var pivot = array[Math.floor((right + left) / 2)],
-    i = left,
+  const pivot = ((left + right) / 2) | 0
+  let i = left,
     j = right
 
   while (i <= j) {
@@ -43,17 +42,15 @@ const partition = function (array, left, right) {
 
 //2. 递归对两个序列进行快排
 const quick = function (array, left, right) {
-  if (array.length > 1) {
-    var index = partition(array, left, right)
-    if (left < index - 1) {
-      quick(array, left, index - 1)
-    }
-    if (index < right) {
-      quick(array, index, right) //将index塞进去，说明index不代表一趟快排之后正确的位置
-    }
+  var index = partition(array, left, right)
+  if (left < index - 1) {
+    quick(array, left, index - 1)
+  }
+  if (index < right) {
+    quick(array, index, right) //将index塞进去，说明index不代表一趟快排之后正确的位置
   }
 
   return array
 }
 
-quick([7,8,3,4,5,10], 0, 5)
+//quick([7, 8, 3, 4, 5, 10], 0, 5)
