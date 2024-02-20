@@ -108,3 +108,4 @@ var quick = function (array, left, right) {
   return array
 }
 
+console.log(quick([7, 8, 3, 4, 5, 10], 0, 5))

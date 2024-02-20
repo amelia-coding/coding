@@ -14,15 +14,15 @@ const gen = (a) => {
   return result
 }
 
-const dfs = (a, index, solution, result) => {
+const dfs = (a, level, solution, result) => {
   if (solution.length === a.length) {
     result.push([...solution])
     return
   }
-  const arr = a[index]
+  const arr = a[level]
   for (let i = 0; i < arr.length; i++) {
     solution.push(arr[i])
-    dfs(a, index + 1, solution, result)
+    dfs(a, level + 1, solution, result)
     solution.pop()
   }
 }
