@@ -1,21 +1,46 @@
 //12045转换一万二千零四十五
 
-const chineseUint = ['', '十', '百', '千', '万', '十万']
+const unit = ['', '万', '亿']
+const unit4 = ['', '十', '百', '千']
+const chinestNum = ['零', '一', '二', '三', '四', '五', '六', '七', '八']
 
-const chinestNum = ['零', '一', '二', '三', '四', '五']
-
-const tran2Chines = (num) => {
-  const nums = String(num).split('').reverse()
+function insertUnit(str) {
   let result = []
-  let flag = false
-  for (let i = 0; i < nums.length; i++) {
-    const cur = nums[i]
-    if (cur == '0') flag = !flag
-    if (flag) continue
-    result.unshift(cur == '0' ? '' : chineseUint[i])
-    result.unshift(chinestNum[cur])
+  const strs = str.split('').reverse()
+
+  for (let i = 0; i < strs.length; i++) {
+    let num = +strs[i]
+    if (num === 0) {
+      result.push(chinestNum[num])
+    } else {
+      result.push(chinestNum[num] + unit4[i])
+    }
   }
-  return result.join('')
+
+  console.log(result)
+
+  return result.reverse().join('')
 }
 
-console.log(tran2Chines(120045))
+//1200,0048
+
+const tran2Chines = (num) => {
+  //从后往前4位分割，4位代表万，然后4位数字内从千、百、十
+  let str = num + ''
+  let i = str.length
+  let span = []
+  while (i > 0) {
+    span.push(str.substring(i - 4, i))
+    i = i - 4
+  }
+  console.log(span)
+  let result = []
+  for (let i = 0; i < span.length; i++) {
+    result.push(insertUnit(span[i]) + unit[i])
+  }
+
+  return result.reverse().join('')
+}
+
+//出现连词单位有问题
+console.log(tran2Chines(12000485))
