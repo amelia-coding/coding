@@ -6,22 +6,25 @@
  * }
  */
 /**
+前序遍历 preorder = [3,9,20,15,7]
+中序遍历 inorder = [9,3,15,20,7]
+
  * 前序+中序=>二叉树
  * @param {number[]} preorder
  * @param {number[]} inorder
  * @return {TreeNode}
  */
 var buildTree = function (preorder, inorder) {
-  if (preorder.length === 0 || inorder.length === 0) return null;
-  const val = preorder[0];
-  const len = preorder.length;
-  const index = inorder.indexOf(val);
-  const subleftInorder = inorder.slice(0, index);
-  const subrightInorder = inorder.slice(index + 1, len);
-  const subleftPreorder = preorder.slice(1, index + 1);
-  const subrightPreorder = preorder.slice(index + 1, len);
-  const root = new TreeNode(val);
-  root.left = buildTree(subleftPreorder, subleftInorder);
-  root.right = buildTree(subrightPreorder, subrightInorder);
-  return root;
-};
+  if (preorder.length === 0 || inorder.length === 0) return null
+  const val = preorder[0]
+  const len = preorder.length
+  const index = inorder.indexOf(val)
+  const subleftInorder = inorder.slice(0, index)
+  const subrightInorder = inorder.slice(index + 1, len)
+  const subleftPreorder = preorder.slice(1, index + 1)
+  const subrightPreorder = preorder.slice(index + 1, len)
+  const root = new TreeNode(val)
+  root.left = buildTree(subleftPreorder, subleftInorder)
+  root.right = buildTree(subrightPreorder, subrightInorder)
+  return root
+}
