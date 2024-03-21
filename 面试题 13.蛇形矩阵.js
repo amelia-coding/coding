@@ -1,19 +1,12 @@
-/* 给出一个m*n的矩阵，输出它的蛇形矩阵
+/* 给出一个m * n的矩阵，输出它的蛇形矩阵
 1  2  6  7
 3  5  8  13
 4  9  12 14
 10 11 15 16
 */
 
-let maxtri = [
-  [1, 2, 6, 7],
-  [3, 5, 8, 13],
-  [4, 9, 12, 14],
-  [10, 11, 15, 16],
-]
-
-let m = maxtri.length
-let n = maxtri[0].length
+let m = 4
+let n = 4
 
 const funcMap = {
   //➡️向右
@@ -55,10 +48,10 @@ function fn() {
     y = 0
   const arrow = ['right', 'leftDown', 'down', 'upRight']
   let arrowIdx = 0
-  let i = 1
-  res[0][0] = 0
+  let i = 2
+  res[0][0] = 1
 
-  while (i < m * n) {
+  while (i <= m * n) {
     // 1.获取方向
     const crtFunc = arrow[arrowIdx]
     // 2.获取坐标
@@ -79,4 +72,4 @@ function fn() {
   console.log('res', res)
 }
 
-fn(maxtri)
+fn()
