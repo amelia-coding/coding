@@ -5,8 +5,8 @@
 10 9  8 7
 */
 
-let m = 5,
-  n = 5
+let m = 3,
+  n = 4
 
 const funcMap = {
   //➡️向右
@@ -54,35 +54,16 @@ function fn() {
   res[0][0] = 1
 
   while (i <= m * n) {
-    let m = left
-    while (m <= right) {
-      res[top][m] = i++
-      m++
-    }
-
+    for (let j = left; j <= right; j++) res[top][j] = i++
     top++
 
-    let n = top
-    while (n <= bottom) {
-      res[n][right] = i++
-      n++
-    }
+    for (let j = top; j <= bottom; j++) res[j][right] = i++
     right--
 
-    let j = right
-    while (j >= left) {
-      res[bottom][j] = i++
-      j--
-    }
-
+    for (let j = right; j >= left; j--) res[bottom][j] = i++
     bottom--
 
-    let k = bottom
-    while (k >= top) {
-      res[k][left] = i++
-      k--
-    }
-
+    for (let j = bottom; j >= top; j--) res[j][left] = i++
     left++
   }
 
