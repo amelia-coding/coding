@@ -8,6 +8,8 @@
 
 [算法总结文档（新增）](./ALGORITHM_SUMMARY.md)
 
+[个人算法清单（第一版）](./PERSONAL_ALGO_CHECKLIST.md)
+
 ## 1. 补充题
 
 [1.生成 6 位验证码](https://github.com/amelia-coding/coding/blob/master/！补充题%201.生成6位验证码.js)
